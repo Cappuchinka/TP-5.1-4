@@ -24,14 +24,14 @@ class HomeFragment : Fragment() {
         recyclerView = view.findViewById(R.id.r_v_categories)
         recyclerView.layoutManager = LinearLayoutManager(activity)
 
-        adapter = CategoryAdapter(getDataCategoties() as MutableList<CategoryModel>)
+        adapter = CategoryAdapter(getDataCategories() as MutableList<CategoryModel>)
         recyclerView.adapter = adapter
 
         return view
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun getDataCategoties(): List<CategoryModel> {
+    private fun getDataCategories(): List<CategoryModel> {
         val categoryModels: MutableList<CategoryModel> = java.util.ArrayList()
 
         categoryModels.add(CategoryModel("Ужасы"))
@@ -40,9 +40,9 @@ class HomeFragment : Fragment() {
         categoryModels.add(CategoryModel("Приключения"))
         categoryModels.add(CategoryModel("Фантастика"))
         categoryModels.add(CategoryModel("Комедии"))
-        categoryModels.add(CategoryModel("Порнография"))
-        categoryModels.add(CategoryModel("Эротика"))
-        categoryModels.add(CategoryModel("БДСМ"))
+        categoryModels.add(CategoryModel("Боевики"))
+        categoryModels.add(CategoryModel("Сказки"))
+        categoryModels.add(CategoryModel("Мультфильмы"))
 
         return categoryModels
     }

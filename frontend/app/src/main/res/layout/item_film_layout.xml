@@ -2,12 +2,14 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/lightBlue">
+    android:background="@color/itemCategoryFilms"
+    android:layout_margin="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/itemCategoryFilms">
 
         <TextView
             android:id="@+id/item_film_name"
@@ -17,7 +19,8 @@
             android:paddingLeft="16dp"
             android:text="Film Name"
             android:background="@color/itemCategoryFilms"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +35,8 @@
                 android:gravity="center"
                 android:text="Film Country"
                 android:background="@color/itemCategoryFilms"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/item_film_year"
@@ -42,7 +46,8 @@
                 android:gravity="center"
                 android:text="Film Year"
                 android:background="@color/itemCategoryFilms"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
