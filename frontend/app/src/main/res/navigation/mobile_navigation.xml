@@ -47,5 +47,14 @@
         android:id="@+id/filmsFragment"
         android:name="ru.kapuchinka.kinosklad.ui.films.FilmsFragment"
         android:label="fragment_films"
-        tools:layout="@layout/fragment_films" />
+        tools:layout="@layout/fragment_films" >
+        <action
+            android:id="@+id/action_filmsFragment_to_filmPageFragment"
+            app:destination="@id/filmPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmPageFragment"
+        android:name="ru.kapuchinka.kinosklad.ui.filmpage.FilmPageFragment"
+        android:label="fragment_film_page"
+        tools:layout="@layout/fragment_film_page" />
 </navigation>
