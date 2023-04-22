@@ -1,42 +1,50 @@
 package ru.kapuchinka.kinosklad.ui.home
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import ru.kapuchinka.kinosklad.databinding.FragmentHomeBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import ru.kapuchinka.kinosklad.R
 
 class HomeFragment : Fragment() {
+    lateinit var adapter: CategoryAdapter
+    lateinit var recyclerView: RecyclerView
 
-    private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        recyclerView = view.findViewById(R.id.r_v_categories)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        adapter = CategoryAdapter(getDataCategoties() as MutableList<CategoryModel>)
+        recyclerView.adapter = adapter
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun getDataCategoties(): List<CategoryModel> {
+        val categoryModels: MutableList<CategoryModel> = java.util.ArrayList()
+
+        categoryModels.add(CategoryModel("Ужасы"))
+        categoryModels.add(CategoryModel("Триллеры"))
+        categoryModels.add(CategoryModel("Драмы"))
+        categoryModels.add(CategoryModel("Приключения"))
+        categoryModels.add(CategoryModel("Фантастика"))
+        categoryModels.add(CategoryModel("Комедии"))
+        categoryModels.add(CategoryModel("Порнография"))
+        categoryModels.add(CategoryModel("Эротика"))
+        categoryModels.add(CategoryModel("БДСМ"))
+
+        return categoryModels
     }
+
 }

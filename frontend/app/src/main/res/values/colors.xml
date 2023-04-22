@@ -11,4 +11,5 @@
     <color name="startColorGradient">#F5416BFF</color>
     <color name="endColorGradient">#C9EBFF</color>
     <color name="blue">#1111FF</color>
+    <color name="itemCategoryFilms">#DAEFFB</color>
 </resources>
