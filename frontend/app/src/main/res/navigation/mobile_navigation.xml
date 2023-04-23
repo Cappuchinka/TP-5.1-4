@@ -38,7 +38,11 @@
         android:id="@+id/navigation_search"
         android:name="ru.kapuchinka.kinosklad.ui.search.SearchFragment"
         android:label="@string/title_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_filmPageFragment"
+            app:destination="@id/filmPageFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -69,5 +73,14 @@
         android:id="@+id/filmPageFragment"
         android:name="ru.kapuchinka.kinosklad.ui.filmpage.FilmPageFragment"
         android:label="fragment_film_page"
-        tools:layout="@layout/fragment_film_page" />
+        tools:layout="@layout/fragment_film_page" >
+        <action
+            android:id="@+id/action_filmPageFragment_to_addFeedBackFragment"
+            app:destination="@id/addFeedBackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFeedBackFragment"
+        android:name="ru.kapuchinka.kinosklad.ui.feedback.AddFeedBackFragment"
+        android:label="fragment_add_feed_back"
+        tools:layout="@layout/fragment_add_feed_back" />
 </navigation>
