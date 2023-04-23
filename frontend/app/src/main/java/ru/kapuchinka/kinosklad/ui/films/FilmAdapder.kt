@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 
@@ -36,6 +37,8 @@ class FilmAdapder(_filmList: MutableList<FilmModel>) : RecyclerView.Adapter<Film
         bundle.putString("filmCountry", filmList[position].filmCountry)
         bundle.putInt("filmYear", filmList[position].filmYear)
 
-
+        holder.itemView.setOnClickListener {
+            it.findNavController().navigate(R.id.action_filmsFragment_to_filmPageFragment, bundle)
+        }
     }
 }

@@ -25,6 +25,7 @@
             android:id="@+id/r_v_favorites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_favorite_layout"/>
+            tools:listitem="@layout/item_favorite_layout"
+            android:padding="16dp"/>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

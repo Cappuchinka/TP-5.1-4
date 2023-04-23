@@ -7,4 +7,5 @@
     <color name="endColorGradient">#C9EBFF</color>
     <color name="blue">#1111FF</color>
     <color name="itemCategoryFilms">#DAEFFB</color>
+    <color name="itemFeedbackBackground">#A4E4FF</color>
 </resources>

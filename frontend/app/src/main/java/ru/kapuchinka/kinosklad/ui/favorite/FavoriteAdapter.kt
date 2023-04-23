@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.ui.films.FilmAdapder
@@ -26,6 +27,10 @@ class FavoriteAdapter(_favoriteList : MutableList<FavoriteModel>) : RecyclerView
         bundle.putString("filmName", favoriteList[position].filmName)
         bundle.putString("filmCountry", favoriteList[position].filmCountry)
         bundle.putInt("filmYear", favoriteList[position].filmYear)
+
+        holder.itemView.setOnClickListener {
+            it.findNavController().navigate(R.id.action_navigation_favorites_to_filmPageFragment, bundle)
+        }
     }
 
     override fun getItemCount(): Int {
