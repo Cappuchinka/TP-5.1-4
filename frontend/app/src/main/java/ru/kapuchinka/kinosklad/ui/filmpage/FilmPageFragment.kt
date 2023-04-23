@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
@@ -26,6 +28,12 @@ class FilmPageFragment : Fragment() {
 
         adapter = FeedBackAdapter(getFeedBacks() as MutableList<FeedBackModel>)
         recyclerView.adapter = adapter
+
+        val feedbackButton : Button = view.findViewById(R.id.button_feedback)
+
+        feedbackButton.setOnClickListener {
+            it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment)
+        }
 
         return view
     }
