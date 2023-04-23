@@ -18,4 +18,4 @@
 [Figma](https://www.figma.com/file/WopgVTDle9o7a8TUWEaoBz/%D0%9A%D0%B8%D0%BD%D0%BE%D1%81%D0%BA%D0%BB%D0%B0%D0%B4?node-id=0-1&t=SffaF9cpbFViun52-0)<br />
 [Диаграммы](https://github.com/Cappuchinka/TP-5.1-4/tree/master/documentation/diagrams)<br />
 
-[Видео Product Mockup проекта](https://youtu.be/VfTQ04tBmrA)
+[Видео Product Mockup проекта]([https://youtu.be/VfTQ04tBmrA](https://youtu.be/C6n3j0hpo-s))
