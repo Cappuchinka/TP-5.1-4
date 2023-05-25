@@ -51,3 +51,47 @@ def get_categories(request):
         all_categories[i] = response[i]
     return JsonResponse(all_categories)
 
+
+@api_view(['POST'])
+def add_film(request):
+    film_id = 0
+    try:
+        all_films = database.child("films").get().each()
+        film_id = len(all_films)
+    except TypeError:
+        pass
+
+    name = 'film'
+    country = 'country'
+    releaseDate = '1970-01-01'
+    date = datetime.strptime(releaseDate, '%Y-%m-%d').date()
+    month = __translate_name_month(date.strftime('%B'))
+    releaseDate = f"{date.day} {month} {date.year}"
+    category_id = film_id
+
+    film_info = {
+        "name": name,
+        "country": country,
+        "releaseDate": releaseDate,
+        "categoryId": category_id
+    }
+
+    database.child("films").child(film_id).set(film_info)
+    return JsonResponse(database.child("films").get().val()[film_id])
+
+def __translate_name_month(key):
+    months = {
+        "January": "Январь",
+        "February": "Февраль",
+        "March": "Март",
+        "April": "Апрель",
+        "May": "Май",
+        "June": "Июнь",
+        "July": "Июль",
+        "August": "Август",
+        "September": "Сентябрь",
+        "October": "Октябрь",
+        "November": "Ноябрь",
+        "December": "Декабрь"
+              }
+    return months[key]
