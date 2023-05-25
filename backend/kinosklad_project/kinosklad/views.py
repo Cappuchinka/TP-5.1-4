@@ -42,3 +42,12 @@ def add_category(request):
 
     database.child("categories").child(category_id).set(category_info)
     return JsonResponse(database.child("categories").get().val()[category_id])
+
+@api_view(['GET'])
+def get_categories(request):
+    response = database.child("categories").get().val()
+    all_categories = dict()
+    for i in range(len(response)):
+        all_categories[i] = response[i]
+    return JsonResponse(all_categories)
+
