@@ -79,6 +79,14 @@ def add_film(request):
     database.child("films").child(film_id).set(film_info)
     return JsonResponse(database.child("films").get().val()[film_id])
 
+@api_view(['GET'])
+def get_films(request):
+    response = database.child("films").get().val()
+    all_films = dict()
+    for i in range(len(response)):
+        all_films[i] = response[i]
+    return JsonResponse(all_films)
+
 def __translate_name_month(key):
     months = {
         "January": "Январь",
