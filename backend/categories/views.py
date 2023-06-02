@@ -59,6 +59,28 @@ def get_categories(request):
     return JsonResponse(category_info)
 
 
+@extend_schema(
+    responses=models.CategoryAddSerializer,
+    tags=['Categories']
+)
+@api_view(['GET'])
+def get_category_info(request, category_id):
+    try:
+        category_info = settings.database.child(settings.CATEGORIES_TABLE).child(category_id).get().val()
+        if not category_info:
+            raise ValidationError
+        else:
+            category_info = dict(category_info)
+        category_info['category_id'] = category_id
+        session = models.CategoryAddSerializer(data=category_info)
+        if not session.is_valid():
+            raise ValidationError
+        session = session.save()
+    except ValidationError:
+        return JsonResponse({'error': 'INVALID_SESSION_ID'})
+    return JsonResponse(models.CategoryAddSerializer(session).data)
+
+
 # @extend_schema(
 #     request=models.CategoryDeleteSerializer,
 #     responses=models.CategoryDeleteSerializer,
