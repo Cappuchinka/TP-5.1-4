@@ -48,9 +48,6 @@ class CategoryAddSerializer(serializers.Serializer):
         OpenApiExample(
             'Delete сategory',
             summary="Delete",
-            value={
-                'idToken': '...'
-            },
             request_only=True,
             response_only=False
         )
@@ -58,7 +55,6 @@ class CategoryAddSerializer(serializers.Serializer):
 )
 class CategoryDeleteSerializer(serializers.Serializer):
     category_id = serializers.IntegerField()
-    idToken = serializers.CharField(max_length=1024)
 
 
 @extend_schema_serializer(

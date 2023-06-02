@@ -81,17 +81,16 @@ def get_category_info(request, category_id):
     return JsonResponse(models.CategoryAddSerializer(session).data)
 
 
-# @extend_schema(
-#     request=models.CategoryDeleteSerializer,
-#     responses=models.CategoryDeleteSerializer,
-#     tags=['Categories'],
-#     parameters=[OpenApiParameter("idToken", OpenApiTypes.STR, OpenApiParameter.QUERY, required=True)],
-# )
-# @api_view(['DELETE'])
-# def delete_category(request, category_id):
-#     try:
-#         id_token = request.GET.get('idToken')
-#     except ValidationError:
-#         return JsonResponse({'error': 'INVALID_DATA'})
-#     if not settings.database.child(settings.CATEGORIES_TABLE).child(category_id).get().val():
-#         return JsonResponse({'error': 'INVALID_SESSION_ID'})
+@extend_schema(
+    request=models.CategoryDeleteSerializer,
+    responses=models.CategoryDeleteSerializer,
+    tags=['Categories']
+)
+@api_view(['DELETE'])
+def delete_category(request, category_id):
+    if not settings.database.child(settings.CATEGORIES_TABLE).child(category_id).get().val():
+        return JsonResponse({'error': 'INVALID_CATEGORY_ID'})
+    categories_list = settings.database.child(settings.CATEGORIES_TABLE).get().val()
+    categories_list.pop(category_id)
+    settings.database.child(settings.CATEGORIES_TABLE).set(categories_list)
+    return HttpResponse(HttpResponse.status_code)
