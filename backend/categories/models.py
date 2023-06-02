@@ -68,10 +68,10 @@ class CategoryDeleteSerializer(serializers.Serializer):
             summary='Info',
             value={
                 0: {
-                    'name': "Комедии"
+                    'category_name': "Комедии"
                 },
                 1: {
-                    'name': "Драмы"
+                    'category_name': "Драмы"
                 }
             },
             request_only=False,
@@ -84,7 +84,7 @@ class CategoriesListSerializer(serializers.Serializer):
 
 
 class CategoryPublicSerializer(serializers.Serializer):
-    name = serializers.CharField(max_length=255)
+    category_name = serializers.CharField(max_length=255)
 
     def create(self, validated_data):
         return Category(**validated_data)

@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b8442d-29ad-4336-8338-46255fc1f02a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad_project/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad_project/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad_project/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad_project/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/kinosklad_project/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinosklad_project/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,11 +109,23 @@
       <option name="presentableId" value="Default" />
       <updated>1685657040896</updated>
       <workItem from="1685657074779" duration="20377000" />
+      <workItem from="1685744344117" duration="2098000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/categories/views.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1685657700560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
