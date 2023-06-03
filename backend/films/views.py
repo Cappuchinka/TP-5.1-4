@@ -40,3 +40,18 @@ def add_film(request):
     film.add_film()
 
     return HttpResponse(HttpResponse.status_code)
+
+
+@extend_schema(
+    responses=models.FilmsListSerializer,
+    tags=['Films']
+)
+@api_view(['GET'])
+def get_films(request):
+    raw_film_info = settings.database.child(settings.FILMS_TABLE).get().val()
+    film_info = {}
+    for i in range(len(raw_film_info)):
+        serialized_raw = models.FilmPublicSerializer(data=raw_film_info[i])
+        serialized_raw.is_valid()
+        film_info[i] = serialized_raw.validated_data
+    return JsonResponse(film_info)
