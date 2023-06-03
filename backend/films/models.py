@@ -2,6 +2,8 @@ from django.db import models
 from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 from rest_framework import serializers
 
+from kinoskladProject import settings
+
 
 class Film(models.Model):
     film_id = models.IntegerField()
@@ -10,6 +12,10 @@ class Film(models.Model):
     description = models.TextField()
     releaseDate = models.CharField(max_length=255)
     categories = models.JSONField(default=None)
+
+    def add_film(self):
+        film_info = FilmSerializer(self).data
+        settings.database.child(settings.FILMS_TABLE).child(self.film_id).update(film_info)
 
 
 class FilmSerializer(serializers.Serializer):
@@ -30,6 +36,7 @@ class FilmSerializer(serializers.Serializer):
                 'idToken': '...',
                 'name': "Тьма",
                 'country': "Германия",
+                'description': "«Тьма» — немецкий драматический и научно-фантастический веб-сериал, созданный Бараном бо Одаром и Янтье Фризе. Он состоит из трёх сезонов, выходивших с 2017 по 2020 год. Действие сериала разворачивается в вымышленном городке Винден.",
                 'releaseDate': "1 декабря 2017",
                 'categories': "[..., ...]"
             },
@@ -38,6 +45,7 @@ class FilmSerializer(serializers.Serializer):
     ]
 )
 class FilmAddSerializer(serializers.Serializer):
+    film_id = serializers.IntegerField()
     name = serializers.CharField(max_length=255)
     country = serializers.CharField(max_length=255)
     description = serializers.CharField()
@@ -53,9 +61,6 @@ class FilmAddSerializer(serializers.Serializer):
         OpenApiExample(
             'Delete film',
             summary="Delete",
-            value={
-                'idToken': '...'
-            },
             request_only=True,
             response_only=False
         )
