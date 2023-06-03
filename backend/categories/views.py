@@ -72,13 +72,13 @@ def get_category_info(request, category_id):
         else:
             category_info = dict(category_info)
         category_info['category_id'] = category_id
-        session = models.CategoryAddSerializer(data=category_info)
-        if not session.is_valid():
+        category = models.CategoryAddSerializer(data=category_info)
+        if not category.is_valid():
             raise ValidationError
-        session = session.save()
+        category = category.save()
     except ValidationError:
         return JsonResponse({'error': 'INVALID_SESSION_ID'})
-    return JsonResponse(models.CategoryAddSerializer(session).data)
+    return JsonResponse(models.CategoryAddSerializer(category).data)
 
 
 @extend_schema(

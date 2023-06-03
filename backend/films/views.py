@@ -55,3 +55,25 @@ def get_films(request):
         serialized_raw.is_valid()
         film_info[i] = serialized_raw.validated_data
     return JsonResponse(film_info)
+
+
+@extend_schema(
+    responses=models.FilmAddSerializer,
+    tags=['Films']
+)
+@api_view(['GET'])
+def get_film_info(request, film_id):
+    try:
+        film_info = settings.database.child(settings.FILMS_TABLE).child(film_id).get().val()
+        if not film_info:
+            raise ValidationError
+        else:
+            film_info = dict(film_info)
+        film_info['film_id'] = film_id
+        film = models.FilmAddSerializer(data=film_info)
+        if not film.is_valid():
+            raise ValidationError
+        film = film.save()
+    except ValidationError:
+        return JsonResponse({'error': 'INVALID_SESSION_ID'})
+    return JsonResponse(models.FilmAddSerializer(film).data)
