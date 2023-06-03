@@ -77,3 +77,44 @@ def get_film_info(request, film_id):
     except ValidationError:
         return JsonResponse({'error': 'INVALID_SESSION_ID'})
     return JsonResponse(models.FilmAddSerializer(film).data)
+
+
+@extend_schema(
+    request=models.FilmDeleteSerializer,
+    responses=models.FilmDeleteSerializer,
+    tags=['Films']
+)
+@api_view(['DELETE'])
+def delete_film(request, film_id):
+    if not settings.database.child(settings.FILMS_TABLE).child(film_id).get().val():
+        return JsonResponse({'error': 'INVALID_CATEGORY_ID'})
+    films_list = settings.database.child(settings.FILMS_TABLE).get().val()
+    films_list.pop(film_id)
+    settings.database.child(settings.FILMS_TABLE).set(films_list)
+    return HttpResponse(HttpResponse.status_code)
+
+
+# @extend_schema(
+#     request=models.FilmAddSerializer,
+#     responses=models.FilmAddSerializer,
+#     tags=["Films"],
+# )
+# @api_view(['PATCH'])
+# def edit_film(request, film_id):
+#     try:
+#         body_unicode = request.body.decode('utf-8')
+#         body_data = json.loads(body_unicode)
+#         body_data['film_id'] = film_id
+#         film_data = models.FilmAddSerializer(data=body_data)
+#         if not film_data.is_valid():
+#             raise ValidationError
+#         film_data = film_data.save()
+#     except ValidationError:
+#         return JsonResponse({'error': 'INVALID_DATA'})
+#     except _JWTError as token_error:
+#         if token_error.args[0] == 'invalid JWT format':
+#             return JsonResponse({'error': 'INVALID_TOKEN'})
+#         else:
+#             return JsonResponse({'error': 'EXPIRED_TOKEN'})
+#     print(models.FilmAddSerializer(film_data).data)
+#     return HttpResponse(HttpResponse.status_code)
