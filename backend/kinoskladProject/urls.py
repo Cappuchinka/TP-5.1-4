@@ -20,7 +20,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework import routers
 
 urlpatterns = [
-    # path('', include('users.urls')),
+    path('', include('users.urls')),
     path('', include('categories.urls')),
     path('', include('films.urls')),
     re_path(r'^swagger/', SpectacularSwaggerView.as_view(url_name="schema")),

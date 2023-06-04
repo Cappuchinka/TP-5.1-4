@@ -3,22 +3,26 @@ from django.db import models
 from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 from rest_framework import serializers
 
+from kinoskladProject import settings
+
 
 class User(models.Model):
-    user_id = models.IntegerField()
+    user_id = models.CharField(max_length=1024)
     nickname = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
-    favorite_films = models.JSONField(default=None)
     is_admin = models.BooleanField(default=False)
+
+    def save_user(self):
+        user = dict(UserSerializer(self).data)
+        settings.database.child(settings.USERS_TABLE).child(self.user_id).update(user)
 
 
 class UserSerializer(serializers.Serializer):
-    user_id = serializers.IntegerField()
+    user_id = serializers.CharField(max_length=1024)
     nickname = serializers.CharField(max_length=255)
     email = serializers.CharField(max_length=255)
     password = serializers.CharField(max_length=255)
-    favorite_films = serializers.JSONField(default=None)
     is_admin = serializers.BooleanField(default=False)
 
 
@@ -44,15 +48,6 @@ class Credentials(models.Model):
             },
             request_only=True,
             response_only=False
-        ),
-        OpenApiExample(
-            'Response with idToken',
-            summary='Returns idToken of user',
-            value={
-                'idToken': "...",
-            },
-            request_only=False,
-            response_only=True
         )
     ]
 )
@@ -79,15 +74,6 @@ class RegistrationSerializer(serializers.Serializer):
             },
             request_only=True,
             response_only=False
-        ),
-        OpenApiExample(
-            'Response with idToken',
-            summary='Returns idToken of user',
-            value={
-                'idToken': "...",
-            },
-            request_only=False,
-            response_only=True
         )
     ]
 )
@@ -97,3 +83,25 @@ class AuthorizationSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         return Credentials(**validated_data)
+
+
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            'Profile data',
+            summary='Info',
+            value={
+                'user_id': '3nBdWS3d58RDkK8yRWdgSGZd1wp2'
+            },
+            request_only=True,
+            response_only=False
+        )
+    ]
+)
+class ProfileUserSerializer(serializers.Serializer):
+    email = serializers.CharField(max_length=64, default=None)
+    nickname = serializers.CharField(max_length=64, default=None)
+
+    def create(self, validated_data):
+        return Credentials(**validated_data)
+
