@@ -65,9 +65,9 @@
                 <ImageView
                     android:id="@+id/page_film_poster"
                     android:layout_width="312dp"
-                    android:layout_height="315dp"
+                    android:layout_height="212dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/poster" />
+                    android:src="@drawable/hurrem" />
 
                 <TextView
                     android:id="@+id/page_film_name"
@@ -76,7 +76,7 @@
                     android:gravity="center"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
-                    android:text="Звёздные войны: Скайуокер. Восход"
+                    android:text="Великолепный век"
                     android:textColor="@color/black"
                     android:textSize="22sp" />
 
@@ -85,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="США (2019)"
+                    android:text="Турция (2011)"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 

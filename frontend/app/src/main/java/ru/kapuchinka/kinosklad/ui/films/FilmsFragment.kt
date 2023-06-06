@@ -34,12 +34,12 @@ class FilmsFragment : Fragment() {
     private fun getDataFilms(): List<FilmModel> {
         var year : Int = 1970
         val filmModels : MutableList<FilmModel> = java.util.ArrayList()
-        filmModels.add(FilmModel("Film_1", "USSR", year++))
-        filmModels.add(FilmModel("Film_2", "Russia", year++))
-        filmModels.add(FilmModel("Film_3", "Germany", year++))
-        filmModels.add(FilmModel("Film_4", "USA", year++))
-        filmModels.add(FilmModel("Film_5", "Italy", year++))
-        filmModels.add(FilmModel("Film_6", "France", year++))
+        filmModels.add(FilmModel("Великолепный век", "Турция", 2011))
+        filmModels.add(FilmModel("Великолепный век: Империя Кёсем", "Турция", 2015))
+        filmModels.add(FilmModel("Королева ночи", "Турция", 2016))
+        filmModels.add(FilmModel("Постучись в мою дверь", "Турция", 2020))
+        filmModels.add(FilmModel("Королёк - птичка певчая", "Турция", 2013))
+        filmModels.add(FilmModel("Основание: Осман", "Турция", 2019))
 
         return filmModels
     }

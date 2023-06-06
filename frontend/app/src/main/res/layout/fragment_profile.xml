@@ -12,7 +12,7 @@
         android:id="@+id/text_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nick"
+        android:text="Kapuchinka"
         android:textSize="40dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

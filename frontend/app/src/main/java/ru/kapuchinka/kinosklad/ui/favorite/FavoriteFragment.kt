@@ -33,9 +33,9 @@ class FavoriteFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun getDataFilms(): List<FavoriteModel> {
         val favoriteModels : MutableList<FavoriteModel> = java.util.ArrayList()
-        favoriteModels.add(FavoriteModel("Film_1", "USSR", 1970))
-        favoriteModels.add(FavoriteModel("Film_3", "Germany", 1972))
-        favoriteModels.add(FavoriteModel("Film_5", "Italy", 1974))
+        favoriteModels.add(FavoriteModel("Тьма", "Германия", 2017))
+        favoriteModels.add(FavoriteModel("1899", "Германия", 2022))
+        favoriteModels.add(FavoriteModel("Бумажный дом", "Италия", 2017))
 
         return favoriteModels
     }

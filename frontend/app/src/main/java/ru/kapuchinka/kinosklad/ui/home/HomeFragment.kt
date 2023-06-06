@@ -37,6 +37,7 @@ class HomeFragment : Fragment() {
         categoryModels.add(CategoryModel("Ужасы"))
         categoryModels.add(CategoryModel("Триллеры"))
         categoryModels.add(CategoryModel("Драмы"))
+        categoryModels.add(CategoryModel("Турецкие"))
         categoryModels.add(CategoryModel("Приключения"))
         categoryModels.add(CategoryModel("Фантастика"))
         categoryModels.add(CategoryModel("Комедии"))

@@ -41,11 +41,9 @@ class FilmPageFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun getFeedBacks(): List<FeedBackModel> {
         val feedBackModels : MutableList<FeedBackModel> = java.util.ArrayList()
-        feedBackModels.add(FeedBackModel("Пользователь_1", "Отзыв_1"))
-        feedBackModels.add(FeedBackModel("Пользователь_2", "Отзыв_2"))
-        feedBackModels.add(FeedBackModel("Пользователь_3", "Отзыв_3"))
-        feedBackModels.add(FeedBackModel("Пользователь_4", "Отзыв_4"))
-        feedBackModels.add(FeedBackModel("Пользователь_5", "Отзыв_5"))
+        feedBackModels.add(FeedBackModel("Мустафа", "Мерьем Узерли хороша в своей роли!"))
+        feedBackModels.add(FeedBackModel("Хатидже", "Ибрагиииииииим!"))
+        feedBackModels.add(FeedBackModel("Сюмбюль Ага", "Бисмилях-ир Рахманим Рахим! Мама миа! Что это такое?"))
         return feedBackModels
     }
 }

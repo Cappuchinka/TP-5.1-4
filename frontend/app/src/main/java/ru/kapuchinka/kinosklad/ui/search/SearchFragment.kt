@@ -40,12 +40,11 @@ class SearchFragment : Fragment() {
     private fun getDataFilms(): List<FilmModel> {
         var year : Int = 1970
         val filmModels : MutableList<FilmModel> = java.util.ArrayList()
-        filmModels.add(FilmModel("Film_1", "USSR", year++))
-        filmModels.add(FilmModel("Film_2", "Russia", year++))
-        filmModels.add(FilmModel("Film_3", "Germany", year++))
-        filmModels.add(FilmModel("Film_4", "USA", year++))
-        filmModels.add(FilmModel("Film_5", "Italy", year++))
-        filmModels.add(FilmModel("Film_6", "France", year++))
+        filmModels.add(FilmModel("Человек-паук", "США", 2002))
+        filmModels.add(FilmModel("Человек-паук 2", "США", 2004))
+        filmModels.add(FilmModel("Человек-паук 3: Враг в отражении", "США", 2007))
+        filmModels.add(FilmModel("Новый Человек-паук", "США", 2012))
+        filmModels.add(FilmModel("Новый Человек-паук: Высокое напряжение", "США", 2014))
 
         return filmModels
     }
