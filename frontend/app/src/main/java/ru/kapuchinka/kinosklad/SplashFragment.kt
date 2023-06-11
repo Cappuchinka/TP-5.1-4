@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.zamenit_vso.splash
+package ru.kapuchinka.kinosklad
 
 import android.os.Bundle
 import android.os.Handler

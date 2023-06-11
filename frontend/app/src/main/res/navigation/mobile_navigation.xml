@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.splash.SplashFragment"
+        android:name="ru.kapuchinka.kinosklad.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
