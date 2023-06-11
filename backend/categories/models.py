@@ -28,7 +28,6 @@ class CategorySerializer(serializers.Serializer):
             'Category',
             summary="Category template",
             value={
-                'idToken': '...',
                 'category_name': "Комедии"
             },
             request_only=True
