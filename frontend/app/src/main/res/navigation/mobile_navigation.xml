@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="ru.kapuchinka.kinosklad.ui.home.HomeFragment"
+        android:name="ru.kapuchinka.kinosklad.view.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="ru.kapuchinka.kinosklad.ui.favorite.FavoriteFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.favorite.FavoriteFragment"
         android:label="@string/title_favorite"
         tools:layout="@layout/fragment_favorite" >
         <action
@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="ru.kapuchinka.kinosklad.ui.search.SearchFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.search.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" >
         <action
@@ -48,7 +48,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.ProfileFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.splash.SplashFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -71,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/filmsFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.films.FilmsFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.films.FilmsFragment"
         android:label="fragment_films"
         tools:layout="@layout/fragment_films" >
         <action
@@ -80,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/filmPageFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.filmpage.FilmPageFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FilmPageFragment"
         android:label="fragment_film_page"
         tools:layout="@layout/fragment_film_page" >
         <action
@@ -89,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFeedBackFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.feedback.AddFeedBackFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.feedback.AddFeedBackFragment"
         android:label="fragment_add_feed_back"
         tools:layout="@layout/fragment_add_feed_back" >
         <action
@@ -98,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/authFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.AuthFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.AuthFragment"
         android:label="fragment_auth"
         tools:layout="@layout/fragment_auth" >
         <action
@@ -110,7 +110,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.login.LoginFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -121,7 +121,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.registration.RegistrationFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.registration.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -132,7 +132,7 @@
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.editprofile.EditProfileFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.editprofile.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" >
         <action
@@ -144,7 +144,7 @@
     </fragment>
     <fragment
         android:id="@+id/changeNickFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.editprofile.changenick.ChangeNickFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.editprofile.changenick.ChangeNickFragment"
         android:label="fragment_change_nick"
         tools:layout="@layout/fragment_change_nick" >
         <action
@@ -153,7 +153,7 @@
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
-        android:name="ru.kapuchinka.kinosklad.ui.profile.editprofile.changepassword.ChangePasswordFragment"
+        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.editprofile.changepassword.ChangePasswordFragment"
         android:label="fragment_change_password"
         tools:layout="@layout/fragment_change_password" >
         <action

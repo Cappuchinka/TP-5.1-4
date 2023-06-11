@@ -8,6 +8,13 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
+import ru.kapuchinka.kinosklad.api.service.CategoryApi
 import ru.kapuchinka.kinosklad.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +24,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://193.233.49.143/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val categoryApi = retrofit.create(CategoryApi::class.java)
+
+        CoroutineScope(Dispatchers.IO).launch {
+            val category = categoryApi.getCategoryById(0)
+            runOnUiThread {
+                print(category.category_id)
+                print(category.category_name)
+            }
+        }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
