@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.api.model
+package ru.kapuchinka.kinosklad.api.model.film
 
 data class Film(
     val film_id: Int,

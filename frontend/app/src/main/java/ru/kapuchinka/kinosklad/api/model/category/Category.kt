@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.api.model
+package ru.kapuchinka.kinosklad.api.model.category
 
 data class Category(
     val category_id: Int,

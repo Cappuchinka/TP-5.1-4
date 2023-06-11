@@ -2,7 +2,7 @@ package ru.kapuchinka.kinosklad.api.service
 
 import retrofit2.http.GET
 import retrofit2.http.Path
-import ru.kapuchinka.kinosklad.api.model.Film
+import ru.kapuchinka.kinosklad.api.model.film.Film
 
 interface FilmApi {
     @GET("get_films_info/{film_id}")
