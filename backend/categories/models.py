@@ -46,37 +46,25 @@ class CategoryAddSerializer(serializers.Serializer):
 @extend_schema_serializer(
     examples=[
         OpenApiExample(
-            'Delete сategory',
-            summary="Delete",
-            request_only=True,
-            response_only=False
-        )
-    ]
-)
-class CategoryDeleteSerializer(serializers.Serializer):
-    category_id = serializers.IntegerField()
-
-
-@extend_schema_serializer(
-    examples=[
-        OpenApiExample(
             'Category info',
             summary='Info',
-            value={
-                0: {
-                    'category_name': "Комедии"
+            value=[
+                {
+                    "category_id" : 0,
+                    "category_name": "Комедии"
                 },
-                1: {
-                    'category_name': "Драмы"
+                {
+                    "category_id" : 1,
+                    "category_name": "Драмы"
                 }
-            },
+            ],
             request_only=False,
             response_only=True
         )
     ]
 )
 class CategoriesListSerializer(serializers.Serializer):
-    category_id = serializers.IntegerField()
+    categories = serializers.JSONField()
 
 
 class CategoryPublicSerializer(serializers.Serializer):

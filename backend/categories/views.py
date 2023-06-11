@@ -50,13 +50,19 @@ def add_category(request):
 )
 @api_view(['GET'])
 def get_categories(request):
-    raw_category_info = settings.database.child(settings.CATEGORIES_TABLE).get().val()
-    category_info = {}
-    for i in range(len(raw_category_info)):
-        serialized_raw = models.CategoryPublicSerializer(data=raw_category_info[i])
-        serialized_raw.is_valid()
-        category_info[i] = serialized_raw.validated_data
-    return JsonResponse(category_info)
+    raw_categories = settings.database.child(settings.CATEGORIES_TABLE).get().val()
+    categories_serialized = []
+    for cat in raw_categories:
+        serialized_category = models.CategorySerializer(data=cat)
+        serialized_category.is_valid()
+        categories_serialized.append(dict(serialized_category.validated_data))
+    category_list = dict()
+    category_list['categories'] = categories_serialized
+
+    categories = models.CategoriesListSerializer(data=category_list)
+    if not categories.is_valid():
+        raise ValidationError
+    return JsonResponse(categories.data)
 
 
 @extend_schema(
@@ -79,18 +85,3 @@ def get_category_info(request, category_id):
     except ValidationError:
         return JsonResponse({'error': 'INVALID_SESSION_ID'})
     return JsonResponse(models.CategoryAddSerializer(category).data)
-
-
-@extend_schema(
-    request=models.CategoryDeleteSerializer,
-    responses=models.CategoryDeleteSerializer,
-    tags=['Categories']
-)
-@api_view(['DELETE'])
-def delete_category(request, category_id):
-    if not settings.database.child(settings.CATEGORIES_TABLE).child(category_id).get().val():
-        return JsonResponse({'error': 'INVALID_CATEGORY_ID'})
-    categories_list = settings.database.child(settings.CATEGORIES_TABLE).get().val()
-    categories_list.pop(category_id)
-    settings.database.child(settings.CATEGORIES_TABLE).set(categories_list)
-    return HttpResponse(HttpResponse.status_code)
