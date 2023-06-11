@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.view.home
+package ru.kapuchinka.kinosklad.view.category
 
 import android.os.Build
 import android.os.Bundle
@@ -15,7 +15,7 @@ import ru.kapuchinka.kinosklad.databinding.FragmentHomeBinding
 import ru.kapuchinka.kinosklad.adapter.CategoryAdapter
 import ru.kapuchinka.kinosklad.viewmodel.CategoryViewModel
 
-class HomeFragment : Fragment() {
+class CategoryFragment : Fragment() {
     lateinit var adapter: CategoryAdapter
     lateinit var recyclerView: RecyclerView
 
