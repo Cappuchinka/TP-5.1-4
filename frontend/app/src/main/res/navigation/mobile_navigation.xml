@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.search.SearchFragment"
+        android:name="ru.kapuchinka.kinosklad.view.search.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" >
         <action
