@@ -6,13 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.film.Film
 
-class FilmAdapter() : RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
+class FilmAdapter(private val itemClickListener: OnItemClickListener) : RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
     var filmList = emptyList<Film>()
+
+    interface OnItemClickListener {
+        fun onItemClick(film: Film)
+    }
 
     class FilmViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var filmName : TextView = itemView.findViewById(R.id.item_film_name)
@@ -26,17 +29,19 @@ class FilmAdapter() : RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: FilmViewHolder, position: Int) {
-        holder.filmName.text = filmList[position].name
-        holder.filmCountry.text = filmList[position].country
-        holder.filmYear.text = filmList[position].releaseDate.toString()
+        val film = filmList[position]
+        holder.filmName.text = film.name
+        holder.filmCountry.text = film.country
+        holder.filmYear.text = film.releaseDate.toString()
 
         val bundle = Bundle()
-        bundle.putString("filmName", filmList[position].name)
-        bundle.putString("filmCountry", filmList[position].country)
-        bundle.putInt("filmYear", filmList[position].releaseDate)
+        bundle.putString("filmName", film.name)
+        bundle.putString("filmCountry", film.country)
+        bundle.putInt("filmYear", film.releaseDate)
+        bundle.putInt("filmId", film.film_id)
 
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.action_filmsFragment_to_filmPageFragment, bundle)
+            itemClickListener.onItemClick(film)
         }
     }
 

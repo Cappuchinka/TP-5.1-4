@@ -1,5 +1,6 @@
-package ru.kapuchinka.kinosklad.zamenit_vso.filmpage
+package ru.kapuchinka.kinosklad.view.filmpage
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,36 +9,54 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
+import ru.kapuchinka.kinosklad.databinding.FragmentFilmPageBinding
+import ru.kapuchinka.kinosklad.viewmodel.filmpage.FilmPageViewModel
 import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackAdapter
 import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackModel
 
 class FilmPageFragment : Fragment() {
     lateinit var adapter: FeedBackAdapter
     lateinit var recyclerView: RecyclerView
+    private lateinit var binding: FragmentFilmPageBinding
+    private val filmPageViewModel: FilmPageViewModel by viewModels()
 
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_film_page, container, false)
-        recyclerView = view.findViewById(R.id.r_v_feedbacks)
+        binding = FragmentFilmPageBinding.inflate(inflater, container, false)
+        val filmId = arguments?.getInt("filmId", 0)
+        recyclerView = binding.rVFeedbacks
         recyclerView.layoutManager = LinearLayoutManager(activity)
 
         adapter = FeedBackAdapter(getFeedBacks() as MutableList<FeedBackModel>)
         recyclerView.adapter = adapter
 
-        val feedbackButton : Button = view.findViewById(R.id.button_feedback)
+        if (filmId != null) {
+            filmPageViewModel.getFilmById(filmId)
+        }
+        filmPageViewModel.film.observe(viewLifecycleOwner) {
+            binding.pageFilmName.text = filmPageViewModel.film.value!!.name
+            val country = filmPageViewModel.film.value!!.country
+            val year = filmPageViewModel.film.value!!.releaseDate
+            binding.pageFilmCountryYear.text = "$country ($year)"
+            binding.pageFilmDescription.text = filmPageViewModel.film.value!!.description
+        }
+
+        val feedbackButton : Button = binding.buttonFeedback
 
         feedbackButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment)
         }
 
-        return view
+        return binding.root
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

@@ -80,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/filmPageFragment"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FilmPageFragment"
+        android:name="ru.kapuchinka.kinosklad.view.filmpage.FilmPageFragment"
         android:label="fragment_film_page"
         tools:layout="@layout/fragment_film_page" >
         <action
