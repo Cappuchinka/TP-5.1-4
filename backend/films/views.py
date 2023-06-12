@@ -134,7 +134,7 @@ def get_film_by_category(request, category_id):
         if film is None:
             continue
         if category_id in eval(film['categories']):
-            serialized_film = models.FilmPublicSerializer(data=film)
+            serialized_film = models.FilmSerializer(data=film)
             serialized_film.is_valid()
             films_serialized.append(dict(serialized_film.validated_data))
 

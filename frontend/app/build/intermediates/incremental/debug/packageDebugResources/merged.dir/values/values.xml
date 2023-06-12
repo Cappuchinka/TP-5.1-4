@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="blue">#1111FF</color>
+    <color name="endColorGradient">#C9EBFF</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="itemCategoryFilms">#DAEFFB</color>
+    <color name="itemFeedbackBackground">#A4E4FF</color>
+    <color name="lightBlue">#C9EBFF</color>
+    <color name="startColorGradient">#F5416BFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="app_name">kinosklad</string>
+    <string name="describtion_film">«Великолепный век» — турецкий остросюжетный телесериал в жанре исторической драмы по сценарию Мерал Окай и Йылмаза Шахина. Его сюжет вдохновлён реальными событиями, он повествует о жизни Османской империи в период правления султана Сулеймана Великолепного и его отношениях со славянской рабыней Александрой.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_favorite">Избранное</string>
+    <string name="title_home">Главное</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_search">Поиск</string>
+    <style name="Theme.Kinosklad" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor" ns1:targetApi="l">@color/lightBlue</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" ns1:targetApi="o_mr1">true</item>
+    </style>
+</resources>
