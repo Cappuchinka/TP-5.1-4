@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import android.provider.BaseColumns
 import ru.kapuchinka.kinosklad.api.model.favorite.FavoriteFilm
 
 class DBManager(context: Context) {
@@ -30,15 +31,20 @@ class DBManager(context: Context) {
         val cursor = db?.query(FavoriteDataBaseColumns.TABLE_NAME, null, null,
             null, null, null, null)
         while (cursor?.moveToNext()!!) {
-            val id = cursor.getInt(cursor.getColumnIndex(FavoriteDataBaseColumns.COLUMN_FILM_ID))
+            val id = cursor.getInt(cursor.getColumnIndex("FavoriteDataBaseColumns.${BaseColumns._ID}"))
+            val film_id = cursor.getInt(cursor.getColumnIndex(FavoriteDataBaseColumns.COLUMN_FILM_ID))
             val name = cursor.getString(cursor.getColumnIndex(FavoriteDataBaseColumns.COLUMN_FILM_NAME))
             val country = cursor.getString(cursor.getColumnIndex(FavoriteDataBaseColumns.COLUMN_COUNTRY))
             val year = cursor.getInt(cursor.getColumnIndex(FavoriteDataBaseColumns.COLUMN_YEAR))
-            val favoriteFilm = FavoriteFilm(id, name, country, year)
+            val favoriteFilm = FavoriteFilm(id, film_id, name, country, year)
             favoriteFilms.add(favoriteFilm)
         }
         cursor.close()
         return favoriteFilms
+    }
+
+    fun deleteFilmFromDB(favFilmID: Int) {
+        db?.execSQL("DELETE FROM ${FavoriteDataBaseColumns.TABLE_NAME} WHERE _id = $favFilmID")
     }
 
     fun closeDB() {

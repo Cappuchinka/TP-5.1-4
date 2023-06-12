@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.adapter.favorite.FavoriteAdapter
 import ru.kapuchinka.kinosklad.api.model.favorite.FavoriteFilm
+import ru.kapuchinka.kinosklad.databinding.FragmentFavoriteBinding
 import ru.kapuchinka.kinosklad.viewmodel.favorite.FavoriteFilmViewModel
 
 class FavoriteFragment : Fragment(), FavoriteAdapter.OnItemClickListener {
@@ -23,16 +25,18 @@ class FavoriteFragment : Fragment(), FavoriteAdapter.OnItemClickListener {
 
     private val favoriteFilmViewModel: FavoriteFilmViewModel by viewModels()
 
+    private lateinit var binding: FragmentFavoriteBinding
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_favorite, container, false)
-        recyclerView = view.findViewById(R.id.r_v_favorites)
+        binding = FragmentFavoriteBinding.inflate(inflater, container, false)
+        recyclerView = binding.rVFavorites
         recyclerView.layoutManager = LinearLayoutManager(activity)
 
-        adapter = FavoriteAdapter(this)
+        adapter = FavoriteAdapter(this, favoriteFilmViewModel, requireContext())
         recyclerView.adapter = adapter
 
         favoriteFilmViewModel.getFavoriteFilms(requireContext())
@@ -43,7 +47,7 @@ class FavoriteFragment : Fragment(), FavoriteAdapter.OnItemClickListener {
             adapter.setList(it.favoriteFilms)
         }
 
-        return view
+        return binding.root
     }
 
     override fun onItemClick(favoriteFilm: FavoriteFilm) {
@@ -52,6 +56,4 @@ class FavoriteFragment : Fragment(), FavoriteAdapter.OnItemClickListener {
         bundle.putInt("filmId", filmId)
         findNavController().navigate(R.id.action_navigation_favorites_to_filmPageFragment, bundle)
     }
-
-
 }

@@ -7,7 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper
 class DBHelper(context: Context) : SQLiteOpenHelper(context, FavoriteDataBaseColumns.DATABASE_NAME,
     null, FavoriteDataBaseColumns.DATABASE_VERSION) {
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL(FavoriteDataBaseColumns.CREATE_TABLE)
+        val request = FavoriteDataBaseColumns.CREATE_TABLE
+        db?.execSQL(request)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {

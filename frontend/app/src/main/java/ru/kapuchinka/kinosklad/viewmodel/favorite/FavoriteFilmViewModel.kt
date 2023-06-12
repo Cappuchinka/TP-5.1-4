@@ -16,4 +16,11 @@ class FavoriteFilmViewModel: ViewModel() {
         dbManager.openDB()
         favoriteFilms.value = FavoriteFilms(dbManager.readFromDB())
     }
+
+    fun deleteFavoriteFilm(context: Context, favFilmID: Int) {
+        dbManager = DBManager(context)
+        dbManager.openDB()
+        dbManager.deleteFilmFromDB(favFilmID)
+        dbManager.closeDB()
+    }
 }
