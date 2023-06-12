@@ -133,7 +133,6 @@ def get_film_by_category(request, category_id):
     for film in raw_films:
         if film is None:
             continue
-        print(film['categories'])
         if category_id in eval(film['categories']):
             serialized_film = models.FilmPublicSerializer(data=film)
             serialized_film.is_valid()

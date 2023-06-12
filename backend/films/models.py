@@ -10,7 +10,7 @@ class Film(models.Model):
     name = models.CharField(max_length=255)
     country = models.CharField(max_length=255)
     description = models.TextField()
-    releaseDate = models.CharField(max_length=255)
+    releaseDate = models.IntegerField()
     categories = models.JSONField(default=None)
 
     def add_film(self):
@@ -23,7 +23,7 @@ class FilmSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=255)
     country = serializers.CharField(max_length=255)
     description = serializers.CharField()
-    releaseDate = serializers.CharField(max_length=255)
+    releaseDate = serializers.IntegerField()
     categories = serializers.JSONField(default=None)
 
 
@@ -48,7 +48,7 @@ class FilmAddSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=255)
     country = serializers.CharField(max_length=255)
     description = serializers.CharField()
-    releaseDate = serializers.CharField(max_length=255)
+    releaseDate = serializers.IntegerField()
     categories = serializers.JSONField(default=None)
 
     def create(self, validated_data):
@@ -123,5 +123,5 @@ class FilmPublicSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=255)
     country = serializers.CharField(max_length=255)
     description = serializers.CharField()
-    releaseDate = serializers.CharField(max_length=255)
+    releaseDate = serializers.IntegerField()
     categories = serializers.JSONField(default=None)
