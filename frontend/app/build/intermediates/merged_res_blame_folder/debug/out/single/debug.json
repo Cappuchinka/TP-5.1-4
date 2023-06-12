@@ -1,0 +1,234 @@
+[
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_change_nick.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_change_nick.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_change_password.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_item_favorite_layout.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_favorite_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_add_feed_back.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_add_feed_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_starwars.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\starwars.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_film_bookmark.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\film_bookmark.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_films.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_films.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_profile.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-pngs-45:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/navigation_mobile_navigation.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-51:/navigation/mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_registration.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_registration.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_delete.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_home.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\home.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_hurrem.jpg.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\hurrem.jpg"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_edit_profile.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_gradient_background_splashscreen.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\gradient_background_splashscreen.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_test.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_item_film_layout.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_film_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_film_page.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_film_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_item_category_layout.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_category_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_icon_splash.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\icon_splash.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_film_page.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-51:/layout/fragment_film_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_item_feedback_layout.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_feedback_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_favorite.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_auth.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_auth.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_poster.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\poster.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\layout_fragment_splash.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_search.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\search.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\drawable_bookmark.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\drawable\\bookmark.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-merged_res-49:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    }
+]
