@@ -70,6 +70,7 @@ class FilmPageFragment : Fragment() {
                 filmPageViewModel.film.value!!.country,
                 filmPageViewModel.film.value!!.releaseDate)
             Toast.makeText(requireContext(), "Фильм добавлен в избранное", Toast.LENGTH_SHORT).show()
+            addFavoriteFilm.setImageResource(R.drawable.bookmark_added)
         }
         return binding.root
     }
