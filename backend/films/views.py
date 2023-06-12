@@ -48,13 +48,19 @@ def add_film(request):
 )
 @api_view(['GET'])
 def get_films(request):
-    raw_film_info = settings.database.child(settings.FILMS_TABLE).get().val()
-    film_info = {}
-    for i in range(len(raw_film_info)):
-        serialized_raw = models.FilmPublicSerializer(data=raw_film_info[i])
-        serialized_raw.is_valid()
-        film_info[i] = serialized_raw.validated_data
-    return JsonResponse(film_info)
+    raw_films = settings.database.child(settings.FILMS_TABLE).get().val()
+    films_serialized = []
+    for film in raw_films:
+        serialized_film = models.FilmPublicSerializer(data=film)
+        serialized_film.is_valid()
+        films_serialized.append(dict(serialized_film.validated_data))
+    film_list = dict()
+    film_list['films'] = films_serialized
+
+    films = models.FilmsListSerializer(data=film_list)
+    if not films.is_valid():
+        raise ValidationError
+    return JsonResponse(films.data)
 
 
 @extend_schema(

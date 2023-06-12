@@ -33,7 +33,6 @@ class FilmSerializer(serializers.Serializer):
             'Film',
             summary="Film template",
             value={
-                'idToken': '...',
                 'name': "Тьма",
                 'country': "Германия",
                 'description': "«Тьма» — немецкий драматический и научно-фантастический веб-сериал, созданный Бараном бо Одаром и Янтье Фризе. Он состоит из трёх сезонов, выходивших с 2017 по 2020 год. Действие сериала разворачивается в вымышленном городке Винден.",
@@ -90,7 +89,7 @@ class FilmDeleteSerializer(serializers.Serializer):
     ]
 )
 class FilmsListSerializer(serializers.Serializer):
-    film_id = serializers.IntegerField()
+    films = serializers.JSONField()
 
 
 class FilmPublicSerializer(serializers.Serializer):
