@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b8442d-29ad-4336-8338-46255fc1f02a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/films/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/films/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/films/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/films/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1686497025020" duration="1614000" />
       <workItem from="1686498771533" duration="197000" />
       <workItem from="1686504029191" duration="4921000" />
-      <workItem from="1686527498168" duration="2505000" />
+      <workItem from="1686527498168" duration="3180000" />
     </task>
     <servers />
   </component>
@@ -126,7 +125,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/films/views.py</url>
-          <line>157</line>
+          <line>158</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -143,6 +142,11 @@
           <url>file://$PROJECT_DIR$/films/views.py</url>
           <line>110</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/films/views.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
