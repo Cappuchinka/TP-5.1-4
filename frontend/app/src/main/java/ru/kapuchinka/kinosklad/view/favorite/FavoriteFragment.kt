@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -36,6 +37,9 @@ class FavoriteFragment : Fragment(), FavoriteAdapter.OnItemClickListener {
 
         favoriteFilmViewModel.getFavoriteFilms(requireContext())
         favoriteFilmViewModel.favoriteFilms.observe(viewLifecycleOwner) {
+            if (it.favoriteFilms.isEmpty()) {
+                Toast.makeText(requireContext(), "Список избранного пуст", Toast.LENGTH_SHORT).show()
+            }
             adapter.setList(it.favoriteFilms)
         }
 
