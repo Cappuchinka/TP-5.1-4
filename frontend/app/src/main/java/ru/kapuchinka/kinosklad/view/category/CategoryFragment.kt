@@ -47,7 +47,8 @@ class CategoryFragment : Fragment(), CategoryAdapter.OnItemClickListener {
     override fun onItemClick(category: Category) {
         val categoryId = category.category_id
         categoryViewModel.categoryId.value = categoryId
-        findNavController().navigate(R.id.action_navigation_home_to_filmsFragment)
+        val bundle = Bundle()
+        bundle.putInt("categoryId", categoryId)
+        findNavController().navigate(R.id.action_navigation_home_to_filmsFragment, bundle)
     }
-
 }

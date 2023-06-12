@@ -17,4 +17,10 @@ class FilmViewModel() : ViewModel() {
         }
     }
 
+    fun getFilmByCategoryId(cat_id: Int) {
+        viewModelScope.launch {
+            filmList.value = repository.getFilmsByCategory(cat_id)
+        }
+    }
+
 }
