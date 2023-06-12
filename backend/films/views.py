@@ -99,7 +99,25 @@ def delete_film(request, film_id):
     settings.database.child(settings.FILMS_TABLE).set(films_list)
     return HttpResponse(HttpResponse.status_code)
 
-
+@extend_schema(
+    request=models.FilmPublicSerializer,
+    responses=models.FilmPublicSerializer,
+    tags=['Films']
+)
+@api_view(['GET'])
+def get_film(request, name):
+    raw_films = settings.database.child(settings.FILMS_TABLE).get().val()
+    film_serialized = None
+    for film in raw_films:
+        if film is None:
+            continue
+        if film['name'] == name:
+            film_serialized = film
+    if film_serialized is not None:
+        film = models.FilmPublicSerializer(data=film_serialized)
+    if not film.is_valid():
+        raise ValidationError
+    return JsonResponse(film.data)
 
 
 # @extend_schema(
