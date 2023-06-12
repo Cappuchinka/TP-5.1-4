@@ -10,6 +10,9 @@ import ru.kapuchinka.kinosklad.repository.category.CategoryRepository
 class CategoryViewModel() : ViewModel() {
     var repository = CategoryRepository()
     val categoryList: MutableLiveData<Categories> = MutableLiveData()
+    val categoryId: MutableLiveData<Int> by lazy {
+        MutableLiveData()
+    }
 
     fun getCategoryList() {
         viewModelScope.launch {

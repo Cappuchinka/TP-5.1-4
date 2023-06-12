@@ -6,14 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.category.Category
 
-class CategoryAdapter() : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
+class CategoryAdapter(private val itemClickListener: OnItemClickListener) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     var categoryList = emptyList<Category>()
+
+    interface OnItemClickListener {
+        fun onItemClick(category: Category)
+    }
 
     class CategoryViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var categoryName : TextView = itemView.findViewById(R.id.item_category)
@@ -29,13 +32,15 @@ class CategoryAdapter() : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolde
     }
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-        holder.categoryName.text = categoryList[position].category_name
+        val category = categoryList[position]
+        holder.categoryName.text = category.category_name
 
         val bundle = Bundle()
         bundle.putString("categoryName", categoryList[position].category_name)
+        bundle.putInt("categoryId", categoryList[position].category_id)
 
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.action_navigation_home_to_filmsFragment, bundle)
+            itemClickListener.onItemClick(category)
         }
     }
 
