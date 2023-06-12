@@ -120,6 +120,31 @@ def get_film(request, name):
     return JsonResponse(film.data)
 
 
+@extend_schema(
+    responses=models.FilmsListSerializer,
+    tags=['Films']
+)
+@api_view(['GET'])
+def get_film_by_category(request, category_id):
+    raw_films = settings.database.child(settings.FILMS_TABLE).get().val()
+    films_serialized = []
+    film_list = dict()
+
+    for film in raw_films:
+        if film is None:
+            continue
+        print(film['categories'])
+        if category_id in eval(film['categories']):
+            serialized_film = models.FilmPublicSerializer(data=film)
+            serialized_film.is_valid()
+            films_serialized.append(dict(serialized_film.validated_data))
+
+    film_list['films'] = films_serialized
+    films = models.FilmsListSerializer(data=film_list)
+    if not films.is_valid():
+        raise ValidationError
+    return JsonResponse(films.data)
+
 # @extend_schema(
 #     request=models.FilmAddSerializer,
 #     responses=models.FilmAddSerializer,
