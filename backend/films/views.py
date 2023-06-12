@@ -68,7 +68,7 @@ def get_films(request):
     tags=['Films']
 )
 @api_view(['GET'])
-def get_film_info(request, film_id):
+def get_film_by_id(request, film_id):
     try:
         film_info = settings.database.child(settings.FILMS_TABLE).child(film_id).get().val()
         if not film_info:
@@ -98,6 +98,8 @@ def delete_film(request, film_id):
     films_list.pop(film_id)
     settings.database.child(settings.FILMS_TABLE).set(films_list)
     return HttpResponse(HttpResponse.status_code)
+
+
 
 
 # @extend_schema(
