@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.databinding.FragmentFilmPageBinding
+import ru.kapuchinka.kinosklad.utils.db.DBManager
 import ru.kapuchinka.kinosklad.viewmodel.filmpage.FilmPageViewModel
 import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackAdapter
 import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackModel
@@ -24,6 +27,7 @@ class FilmPageFragment : Fragment() {
     lateinit var recyclerView: RecyclerView
     private lateinit var binding: FragmentFilmPageBinding
     private val filmPageViewModel: FilmPageViewModel by viewModels()
+    private lateinit var dbManager: DBManager
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
@@ -32,6 +36,8 @@ class FilmPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFilmPageBinding.inflate(inflater, container, false)
+        dbManager = context?.let { DBManager(it) }!!
+
         val filmId = arguments?.getInt("filmId", 0)
         recyclerView = binding.rVFeedbacks
         recyclerView.layoutManager = LinearLayoutManager(activity)
@@ -50,12 +56,21 @@ class FilmPageFragment : Fragment() {
             binding.pageFilmDescription.text = filmPageViewModel.film.value!!.description
         }
 
-        val feedbackButton : Button = binding.buttonFeedback
+//        val feedbackButton : Button = binding.buttonFeedback
+//
+//        feedbackButton.setOnClickListener {
+//            it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment)
+//        }
 
-        feedbackButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment)
+        val addFavoriteFilm : ImageButton = binding.buttonAddFavorite
+        addFavoriteFilm.setOnClickListener {
+            dbManager.openDB()
+            dbManager.insertToDB(filmPageViewModel.film.value!!.film_id,
+                filmPageViewModel.film.value!!.name,
+                filmPageViewModel.film.value!!.country,
+                filmPageViewModel.film.value!!.releaseDate)
+            Toast.makeText(requireContext(), "Фильм добавлен в избранное", Toast.LENGTH_SHORT).show()
         }
-
         return binding.root
     }
 
@@ -66,5 +81,10 @@ class FilmPageFragment : Fragment() {
         feedBackModels.add(FeedBackModel("Хатидже", "Ибрагиииииииим!"))
         feedBackModels.add(FeedBackModel("Сюмбюль Ага", "Бисмилях-ир Рахманим Рахим! Мама миа! Что это такое?"))
         return feedBackModels
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dbManager.closeDB()
     }
 }
