@@ -71,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/filmsFragment"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.films.FilmsFragment"
+        android:name="ru.kapuchinka.kinosklad.view.films.FilmsFragment"
         android:label="fragment_films"
         tools:layout="@layout/fragment_films" >
         <action

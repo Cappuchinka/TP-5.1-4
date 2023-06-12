@@ -2,9 +2,9 @@ package ru.kapuchinka.kinosklad.api.model.film
 
 data class Film(
     val film_id: Int,
-    val film_name: String,
+    val name: String,
     val description: String,
     val country: String,
-    val year: Int,
-    val categories: List<Film>
+    val releaseDate: Int,
+    val categories: String
 )

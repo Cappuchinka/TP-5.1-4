@@ -12,6 +12,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
+import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackAdapter
+import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackModel
 
 class FilmPageFragment : Fragment() {
     lateinit var adapter: FeedBackAdapter

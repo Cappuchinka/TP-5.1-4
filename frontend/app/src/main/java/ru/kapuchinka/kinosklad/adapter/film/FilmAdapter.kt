@@ -1,5 +1,6 @@
-package ru.kapuchinka.kinosklad.zamenit_vso.films
+package ru.kapuchinka.kinosklad.adapter.film
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +9,10 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
+import ru.kapuchinka.kinosklad.api.model.film.Film
 
-class FilmAdapder(_filmList: MutableList<FilmModel>) : RecyclerView.Adapter<FilmAdapder.FilmViewHolder>() {
-    private var filmList : MutableList<FilmModel> = _filmList
+class FilmAdapter() : RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
+    var filmList = emptyList<Film>()
 
     class FilmViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var filmName : TextView = itemView.findViewById(R.id.item_film_name)
@@ -20,25 +22,31 @@ class FilmAdapder(_filmList: MutableList<FilmModel>) : RecyclerView.Adapter<Film
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmViewHolder {
         val filmItems : View = LayoutInflater.from(parent.context).inflate(R.layout.item_film_layout, parent, false)
-        return FilmAdapder.FilmViewHolder(filmItems)
+        return FilmViewHolder(filmItems)
+    }
+
+    override fun onBindViewHolder(holder: FilmViewHolder, position: Int) {
+        holder.filmName.text = filmList[position].name
+        holder.filmCountry.text = filmList[position].country
+        holder.filmYear.text = filmList[position].releaseDate.toString()
+
+        val bundle = Bundle()
+        bundle.putString("filmName", filmList[position].name)
+        bundle.putString("filmCountry", filmList[position].country)
+        bundle.putInt("filmYear", filmList[position].releaseDate)
+
+        holder.itemView.setOnClickListener {
+            it.findNavController().navigate(R.id.action_filmsFragment_to_filmPageFragment, bundle)
+        }
     }
 
     override fun getItemCount(): Int {
         return filmList.size
     }
 
-    override fun onBindViewHolder(holder: FilmViewHolder, position: Int) {
-        holder.filmName.text = filmList[position].filmName
-        holder.filmCountry.text = filmList[position].filmCountry
-        holder.filmYear.text = filmList[position].filmYear.toString()
-
-        val bundle = Bundle()
-        bundle.putString("filmName", filmList[position].filmName)
-        bundle.putString("filmCountry", filmList[position].filmCountry)
-        bundle.putInt("filmYear", filmList[position].filmYear)
-
-        holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.action_filmsFragment_to_filmPageFragment, bundle)
-        }
+    @SuppressLint("NotifyDataSetChanged")
+    fun setList(filmsList: List<Film>) {
+        filmList = filmsList
+        notifyDataSetChanged()
     }
 }

@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.viewmodel
+package ru.kapuchinka.kinosklad.viewmodel.category
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

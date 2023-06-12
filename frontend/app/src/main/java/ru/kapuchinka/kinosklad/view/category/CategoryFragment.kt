@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.databinding.FragmentHomeBinding
-import ru.kapuchinka.kinosklad.adapter.CategoryAdapter
-import ru.kapuchinka.kinosklad.viewmodel.CategoryViewModel
+import ru.kapuchinka.kinosklad.adapter.category.CategoryAdapter
+import ru.kapuchinka.kinosklad.viewmodel.category.CategoryViewModel
 
 class CategoryFragment : Fragment() {
     lateinit var adapter: CategoryAdapter

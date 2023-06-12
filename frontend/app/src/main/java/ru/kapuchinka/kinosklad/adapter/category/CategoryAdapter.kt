@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.adapter
+package ru.kapuchinka.kinosklad.adapter.category
 
 import android.annotation.SuppressLint
 import android.os.Bundle
