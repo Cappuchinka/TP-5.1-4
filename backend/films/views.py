@@ -114,7 +114,7 @@ def get_film(request, name):
         if film['name'] == name:
             film_serialized = film
     if film_serialized is not None:
-        film = models.FilmPublicSerializer(data=film_serialized)
+        film = models.FilmSerializer(data=film_serialized)
     if not film.is_valid():
         raise ValidationError
     return JsonResponse(film.data)
@@ -143,28 +143,3 @@ def get_film_by_category(request, category_id):
     if not films.is_valid():
         raise ValidationError
     return JsonResponse(films.data)
-
-# @extend_schema(
-#     request=models.FilmAddSerializer,
-#     responses=models.FilmAddSerializer,
-#     tags=["Films"],
-# )
-# @api_view(['PATCH'])
-# def edit_film(request, film_id):
-#     try:
-#         body_unicode = request.body.decode('utf-8')
-#         body_data = json.loads(body_unicode)
-#         body_data['film_id'] = film_id
-#         film_data = models.FilmAddSerializer(data=body_data)
-#         if not film_data.is_valid():
-#             raise ValidationError
-#         film_data = film_data.save()
-#     except ValidationError:
-#         return JsonResponse({'error': 'INVALID_DATA'})
-#     except _JWTError as token_error:
-#         if token_error.args[0] == 'invalid JWT format':
-#             return JsonResponse({'error': 'INVALID_TOKEN'})
-#         else:
-#             return JsonResponse({'error': 'EXPIRED_TOKEN'})
-#     print(models.FilmAddSerializer(film_data).data)
-#     return HttpResponse(HttpResponse.status_code)
