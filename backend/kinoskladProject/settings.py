@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 USERS_TABLE = 'users_table'
 CATEGORIES_TABLE = 'categories_table'
 FILMS_TABLE = 'films_table'
+FEEDBACKS_TABLE = 'feedbacks_table'
 
 
 # Quick-start development settings - unsuitable for production
@@ -52,7 +53,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'categories',
-    'films'
+    'films',
+    'feedbacks'
 ]
 
 REST_FRAMEWORK = {

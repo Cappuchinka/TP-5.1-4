@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('categories.urls')),
     path('', include('films.urls')),
+    path('', include('feedbacks.urls')),
     re_path(r'^swagger/', SpectacularSwaggerView.as_view(url_name="schema")),
     re_path(r'^schema/', SpectacularAPIView.as_view(), name="schema")
 ]
