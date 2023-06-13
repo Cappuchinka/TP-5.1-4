@@ -95,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/authFragment"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.AuthFragment"
+        android:name="ru.kapuchinka.kinosklad.view.profile.AuthFragment"
         android:label="fragment_auth"
         tools:layout="@layout/fragment_auth" >
         <action
@@ -107,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.login.LoginFragment"
+        android:name="ru.kapuchinka.kinosklad.view.profile.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action

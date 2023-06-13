@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.zamenit_vso.profile
+package ru.kapuchinka.kinosklad.view.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -5,11 +5,11 @@
     android:id="@+id/frameLayout7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".zamenit_vso.profile.login.LoginFragment"
+    tools:context=".view.profile.LoginFragment"
     android:background="@color/lightBlue">
 
     <EditText
-        android:id="@+id/reg_email"
+        android:id="@+id/auth_email"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:background="@color/white"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.356" />
 
     <EditText
-        android:id="@+id/reg_password"
+        android:id="@+id/auth_password"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginBottom="352dp"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_email"
+        app:layout_constraintTop_toBottomOf="@+id/auth_email"
         app:layout_constraintVertical_bias="0.611" />
 
     <Button
@@ -60,6 +60,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_password"
+        app:layout_constraintTop_toBottomOf="@+id/auth_password"
         app:layout_constraintVertical_bias="0.733" />
 </androidx.constraintlayout.widget.ConstraintLayout>
