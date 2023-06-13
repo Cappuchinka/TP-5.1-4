@@ -16,5 +16,5 @@ interface FilmApi {
     suspend fun getFilmByCategory(@Path("category_id") category_id: Int): Films
 
     @GET("get_film/{name}")
-    suspend fun getFilmByName(@Path("name") name: String): Film
+    suspend fun getFilmByName(@Path("name") name: String): Films
 }

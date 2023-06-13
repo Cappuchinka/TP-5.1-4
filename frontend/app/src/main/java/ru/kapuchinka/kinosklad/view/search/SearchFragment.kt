@@ -43,9 +43,7 @@ class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
             searchText = binding.searchStroke.text.toString().trim()
             searchViewModel.getFilmsByName(searchText)
             searchViewModel.searchList.observe(viewLifecycleOwner) {
-                val films: ArrayList<Film> = ArrayList()
-                films.add(it)
-                adapter.setList(films)
+                adapter.setList(it.films)
             }
         }
 

@@ -9,7 +9,7 @@ class FilmRepository {
         return RetrofitInstance.filmApi.getFilms()
     }
 
-    suspend fun getFilm(filmName: String): Film {
+    suspend fun getFilm(filmName: String): Films {
         return RetrofitInstance.filmApi.getFilmByName(filmName)
     }
 
