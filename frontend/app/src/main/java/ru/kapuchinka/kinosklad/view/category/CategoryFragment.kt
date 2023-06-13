@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.adapter.category.CategoryAdapter
 import ru.kapuchinka.kinosklad.api.model.category.Category
-import ru.kapuchinka.kinosklad.databinding.FragmentHomeBinding
 import ru.kapuchinka.kinosklad.viewmodel.category.CategoryViewModel
 
 class CategoryFragment : Fragment(), CategoryAdapter.OnItemClickListener {
@@ -28,7 +27,7 @@ class CategoryFragment : Fragment(), CategoryAdapter.OnItemClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_category, container, false)
         recyclerView = view.findViewById(R.id.r_v_categories)
         recyclerView.layoutManager = LinearLayoutManager(activity)
         adapter = CategoryAdapter(this)
