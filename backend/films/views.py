@@ -108,16 +108,24 @@ def delete_film(request, film_id):
 def get_film(request, name):
     raw_films = settings.database.child(settings.FILMS_TABLE).get().val()
     film_serialized = None
+    films = []
     for film in raw_films:
         if film is None:
             continue
-        if film['name'] == name:
+        if name.upper() in film['name'].upper():
             film_serialized = film
-    if film_serialized is not None:
-        film = models.FilmSerializer(data=film_serialized)
-    if not film.is_valid():
+            if film_serialized is not None:
+                film = models.FilmSerializer(data=film_serialized)
+            if not film.is_valid():
+                raise ValidationError
+            films.append(dict(film.validated_data))
+    films_serialized = dict()
+    films_serialized['films'] = films
+    json_response = models.FilmsListSerializer(data=films_serialized)
+    if not json_response.is_valid():
         raise ValidationError
-    return JsonResponse(film.data)
+
+    return JsonResponse(json_response.data)
 
 
 @extend_schema(
