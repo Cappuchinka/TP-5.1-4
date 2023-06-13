@@ -6,27 +6,26 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
+import ru.kapuchinka.kinosklad.adapter.feedback.FeedbackAdapter
 import ru.kapuchinka.kinosklad.databinding.FragmentFilmPageBinding
 import ru.kapuchinka.kinosklad.utils.db.DBManager
+import ru.kapuchinka.kinosklad.viewmodel.feedback.FeedbackViewModel
 import ru.kapuchinka.kinosklad.viewmodel.filmpage.FilmPageViewModel
-import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackAdapter
-import ru.kapuchinka.kinosklad.zamenit_vso.filmpage.FeedBackModel
 
 class FilmPageFragment : Fragment() {
-    lateinit var adapter: FeedBackAdapter
+    lateinit var adapter: FeedbackAdapter
     lateinit var recyclerView: RecyclerView
     private lateinit var binding: FragmentFilmPageBinding
     private val filmPageViewModel: FilmPageViewModel by viewModels()
+    private val feedbackViewModel: FeedbackViewModel by viewModels()
     private lateinit var dbManager: DBManager
 
     @SuppressLint("SetTextI18n")
@@ -41,8 +40,8 @@ class FilmPageFragment : Fragment() {
         val filmId = arguments?.getInt("filmId", 0)
         recyclerView = binding.rVFeedbacks
         recyclerView.layoutManager = LinearLayoutManager(activity)
-
-        adapter = FeedBackAdapter(getFeedBacks() as MutableList<FeedBackModel>)
+//
+        adapter = FeedbackAdapter()
         recyclerView.adapter = adapter
 
         if (filmId != null) {
@@ -55,7 +54,12 @@ class FilmPageFragment : Fragment() {
             binding.pageFilmCountryYear.text = "$country ($year)"
             binding.pageFilmDescription.text = filmPageViewModel.film.value!!.description
         }
-
+        if (filmId != null) {
+            feedbackViewModel.getFeedbackByFilmId(filmId)
+        }
+        feedbackViewModel.feedbacks.observe(viewLifecycleOwner) {
+            adapter.setList(it.feedbacks)
+        }
 //        val feedbackButton : Button = binding.buttonFeedback
 //
 //        feedbackButton.setOnClickListener {
@@ -73,15 +77,6 @@ class FilmPageFragment : Fragment() {
             addFavoriteFilm.setImageResource(R.drawable.bookmark_added)
         }
         return binding.root
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    private fun getFeedBacks(): List<FeedBackModel> {
-        val feedBackModels : MutableList<FeedBackModel> = java.util.ArrayList()
-        feedBackModels.add(FeedBackModel("Мустафа", "Мерьем Узерли хороша в своей роли!"))
-        feedBackModels.add(FeedBackModel("Хатидже", "Ибрагиииииииим!"))
-        feedBackModels.add(FeedBackModel("Сюмбюль Ага", "Бисмилях-ир Рахманим Рахим! Мама миа! Что это такое?"))
-        return feedBackModels
     }
 
     override fun onDestroy() {

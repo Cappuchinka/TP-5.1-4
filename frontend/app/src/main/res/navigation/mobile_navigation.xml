@@ -89,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFeedBackFragment"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.feedback.AddFeedBackFragment"
+        android:name="ru.kapuchinka.kinosklad.view.feedback.AddFeedBackFragment"
         android:label="fragment_add_feed_back"
         tools:layout="@layout/fragment_add_feed_back" >
         <action

@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.zamenit_vso.feedback
+package ru.kapuchinka.kinosklad.view.feedback
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
