@@ -45,7 +45,7 @@ def register_user(request):
         settings.auth.delete_user_account(auth_user['idToken'])
         return JsonResponse({'error': e.args[0]})
 
-    return JsonResponse({'idToken': auth_user.get('idToken')})
+    return JsonResponse({'idToken': user.token})
 
 
 @extend_schema(
@@ -63,7 +63,7 @@ def auth_user(request):
         return JsonResponse({'error': 'INVALID_CREDENTIALS'})
     except HTTPError as exception:
         return JsonResponse({'error': extract_http_error_message(exception.args[1])})
-    return JsonResponse({'idToken': auth_user.get('idToken')})
+    return JsonResponse({'idToken': auth_user.get('localId')})
 
 
 @extend_schema(
@@ -72,21 +72,19 @@ def auth_user(request):
     tags=["Users"]
 )
 @api_view(['GET'])
-def user_info(request, user_id):
-    try:
-        user_info = settings.database.child(settings.USERS_TABLE).child(user_id).get().val()
-        user_info.pop('password')
-        user_info.pop('is_admin')
-        user_info.pop('user_id')
-        print(user_info)
-        user_info = dict(user_info)
-        user = models.ProfileUserSerializer(data=user_info)
-        if not user.is_valid():
-            raise ValidationError
-        user = user.save()
-    except ValidationError:
-        return JsonResponse({'error': 'INVALID_USER_ID'})
-    return JsonResponse(models.ProfileUserSerializer(user).data)
+def get_user_by_token(request, token):
+    raw_users = settings.database.child(settings.USERS_TABLE).get().val()
+    user_serialized = dict()
+    for raw_user in raw_users:
+        if raw_user is None:
+            continue
+        if token == raw_user['token']:
+            user_serialized['email'] = raw_user['email']
+            user_serialized['nickname'] = raw_user['nickname']
+            user = models.ProfileUserSerializer(data=user_serialized)
+    if not user.is_valid():
+        raise ValidationError
+    return JsonResponse(user.validated_data)
 
 
 def complete_serialize(used_data: dict, serializer):
