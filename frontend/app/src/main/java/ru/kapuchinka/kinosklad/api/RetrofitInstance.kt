@@ -6,6 +6,7 @@ import retrofit2.create
 import ru.kapuchinka.kinosklad.api.service.CategoryApi
 import ru.kapuchinka.kinosklad.api.service.FeedbackApi
 import ru.kapuchinka.kinosklad.api.service.FilmApi
+import ru.kapuchinka.kinosklad.api.service.UserApi
 
 object RetrofitInstance {
     private val retrofit by lazy {
@@ -25,5 +26,9 @@ object RetrofitInstance {
 
     val feedbackApi:FeedbackApi by lazy {
         retrofit.create(FeedbackApi::class.java)
+    }
+
+    val userApi:UserApi by lazy {
+        retrofit.create(UserApi::class.java)
     }
 }
