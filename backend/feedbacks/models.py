@@ -69,5 +69,5 @@ class FeedbackAddSerializer(serializers.Serializer):
         )
     ]
 )
-class FilmsListSerializer(serializers.Serializer):
-    films = serializers.JSONField()
+class FeedbackListSerializer(serializers.Serializer):
+    feedbacks = serializers.JSONField()

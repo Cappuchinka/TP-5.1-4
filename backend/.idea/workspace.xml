@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="21b8442d-29ad-4336-8338-46255fc1f02a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinoskladProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinoskladProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinoskladProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinoskladProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +120,7 @@
       <workItem from="1686565568347" duration="645000" />
       <workItem from="1686587692960" duration="172000" />
       <workItem from="1686588879689" duration="74000" />
-      <workItem from="1686616114286" duration="2035000" />
+      <workItem from="1686616114286" duration="3722000" />
     </task>
     <servers />
   </component>
@@ -148,6 +149,11 @@
           <url>file://$PROJECT_DIR$/films/views.py</url>
           <line>135</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/feedbacks/views.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

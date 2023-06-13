@@ -40,3 +40,27 @@ def add_feedback(request):
     feedback.add_feedback()
 
     return HttpResponse(HttpResponse.status_code)
+
+
+@extend_schema(
+    request=models.FeedbackListSerializer,
+    tags=['Feedbacks']
+)
+@api_view(['GET'])
+def get_feedback_by_film_id(request, film_id):
+    raw_feedbacks = settings.database.child(settings.FEEDBACKS_TABLE).get().val()
+    feedbacks = []
+    for feedback in raw_feedbacks:
+        if feedback is None:
+            continue
+        if feedback['film_id'] == film_id:
+            feedback_serialized = models.FeedbackSerializer(data=feedback)
+            if not feedback_serialized.is_valid():
+                raise ValidationError
+            feedbacks.append(feedback_serialized.data)
+    feedbacks_serialized = dict()
+    feedbacks_serialized['feedbacks'] = feedbacks
+    json_feedbacks = models.FeedbackListSerializer(data=feedbacks_serialized)
+    if not json_feedbacks.is_valid():
+        raise ValidationError
+    return JsonResponse(json_feedbacks.data)
