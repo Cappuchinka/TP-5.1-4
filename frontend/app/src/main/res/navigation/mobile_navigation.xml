@@ -48,7 +48,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="ru.kapuchinka.kinosklad.zamenit_vso.profile.ProfileFragment"
+        android:name="ru.kapuchinka.kinosklad.view.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
