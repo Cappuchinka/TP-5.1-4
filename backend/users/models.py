@@ -7,11 +7,11 @@ from kinoskladProject import settings
 
 
 class User(models.Model):
-    user_id = models.CharField(max_length=1024)
-    nickname = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
-    password = models.CharField(max_length=255)
-    is_admin = models.BooleanField(default=False)
+    user_id = models.IntegerField()
+    nickname = models.CharField(max_length=64)
+    email = models.EmailField(max_length=64)
+    password = models.CharField(max_length=64)
+    token = models.CharField(max_length=1024)
 
     def save_user(self):
         user = dict(UserSerializer(self).data)
@@ -19,11 +19,11 @@ class User(models.Model):
 
 
 class UserSerializer(serializers.Serializer):
-    user_id = serializers.CharField(max_length=1024)
-    nickname = serializers.CharField(max_length=255)
-    email = serializers.CharField(max_length=255)
-    password = serializers.CharField(max_length=255)
-    is_admin = serializers.BooleanField(default=False)
+    user_id = serializers.IntegerField()
+    nickname = serializers.CharField(max_length=64)
+    email = serializers.EmailField(max_length=64)
+    password = serializers.CharField(max_length=64)
+    token = serializers.CharField(max_length=1024)
 
 
 class Credentials(models.Model):
@@ -42,9 +42,9 @@ class Credentials(models.Model):
                         "2. nickname - nickname of user, can' be less than 4 symbols.\n"
                         "3. password - can't be less than 6 symbols.",
             value={
-                'email': "qwerty@yandex.ru",
+                'email': "qwerty@gmail.com",
                 'nickname': 'qwerty',
-                'password': "qwerty"
+                'password': "ytrewq"
             },
             request_only=True,
             response_only=False
@@ -69,8 +69,8 @@ class RegistrationSerializer(serializers.Serializer):
                         "1. email - email-address of user.\n"
                         "2. password - can't be less than 6 symbols.",
             value={
-                'email': "qwerty@yandex.ru",
-                'password': "qwerty"
+                'email': "qwerty@gmail.com",
+                'password': "ytrewq"
             },
             request_only=True,
             response_only=False
@@ -91,7 +91,8 @@ class AuthorizationSerializer(serializers.Serializer):
             'Profile data',
             summary='Info',
             value={
-                'user_id': '3nBdWS3d58RDkK8yRWdgSGZd1wp2'
+                'email': "qwerty@gmail.com",
+                'nickname': "qwerty"
             },
             request_only=True,
             response_only=False

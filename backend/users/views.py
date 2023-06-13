@@ -21,18 +21,30 @@ def register_user(request):
         body_unicode = request.body.decode('utf-8')
         body_data = json.loads(body_unicode)
         credentials = complete_serialize(body_data, models.RegistrationSerializer)
+        user_id = 0
+
+        try:
+            all_users = settings.database.child(settings.USERS_TABLE).get().each()
+            user_id = len(all_users)
+        except TypeError:
+            pass
+
     except ValidationError:
         return JsonResponse({'error': 'INVALID_CREDENTIALS'})
+
     try:
         auth_user = settings.auth.create_user_with_email_and_password(credentials.email, credentials.password)
     except HTTPError as exception:
         return JsonResponse({'error': extract_http_error_message(exception.args[1])})
-    user = models.User(user_id=auth_user.get('localId'), email=credentials.email, nickname=credentials.nickname, password=" ", favorite_films=[], is_admin=False)
+
+    user = models.User(user_id=user_id, email=credentials.email, nickname=credentials.nickname, password=credentials.password, token=auth_user.get('localId'))
+
     try:
         user.save_user()
     except ValueError as e:
         settings.auth.delete_user_account(auth_user['idToken'])
         return JsonResponse({'error': e.args[0]})
+
     return JsonResponse({'idToken': auth_user.get('idToken')})
 
 
