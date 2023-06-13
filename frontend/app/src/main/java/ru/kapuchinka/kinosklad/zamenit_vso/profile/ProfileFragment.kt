@@ -18,14 +18,9 @@ class ProfileFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
         val logoutButton : Button = view.findViewById(R.id.button_logout)
-        val editProfileButton : Button = view.findViewById(R.id.button_edit)
 
         logoutButton.setOnClickListener{
             it.findNavController().navigate(R.id.action_navigation_profile_to_authFragment)
-        }
-
-        editProfileButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_navigation_profile_to_editProfileFragment)
         }
 
         return view

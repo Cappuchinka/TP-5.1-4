@@ -23,8 +23,6 @@ class CategoryFragment : Fragment(), CategoryAdapter.OnItemClickListener {
 
     private val categoryViewModel: CategoryViewModel by viewModels()
 
-    private lateinit var binding: FragmentHomeBinding
-
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

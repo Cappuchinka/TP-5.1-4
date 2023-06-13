@@ -9,27 +9,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@color/itemCategoryFilms"
+        android:layout_height="99dp"
         android:layout_margin="4dp"
+        android:background="@color/itemCategoryFilms"
+        android:orientation="horizontal"
         android:padding="4dp">
 
         <LinearLayout
             android:layout_width="296dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/item_fav_film_name"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="59dp"
                 android:background="@color/itemCategoryFilms"
                 android:gravity="center|left"
+                android:paddingLeft="16sp"
                 android:text="Film Name"
                 android:textColor="@color/black"
-                android:paddingLeft="16sp"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                     android:gravity="center"
                     android:text="Film Country"
                     android:textColor="@color/black"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/item_fav_film_year"
@@ -56,7 +56,7 @@
                     android:gravity="center"
                     android:text="Film Year"
                     android:textColor="@color/black"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 
