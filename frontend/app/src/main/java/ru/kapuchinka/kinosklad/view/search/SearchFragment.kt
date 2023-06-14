@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -41,6 +42,11 @@ class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
 
         searchButton.setOnClickListener {
             searchText = binding.searchStroke.text.toString().trim()
+
+            if (searchText == "") {
+                Toast.makeText(requireContext(), "Введите название фильма", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             searchViewModel.getFilmsByName(searchText)
             searchViewModel.searchList.observe(viewLifecycleOwner) {
                 adapter.setList(it.films)

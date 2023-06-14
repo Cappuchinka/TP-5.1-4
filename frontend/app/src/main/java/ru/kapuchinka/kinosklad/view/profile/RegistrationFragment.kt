@@ -40,6 +40,26 @@ class RegistrationFragment : Fragment() {
             val password = binding.regPassword.text.toString().trim()
             val passwordRepeat = binding.regPasswordRepeat.text.toString().trim()
 
+            if (email == "") {
+                Toast.makeText(requireContext(), "Введите email", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (nickname == "") {
+                Toast.makeText(requireContext(), "Введите ник", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password == "") {
+                Toast.makeText(requireContext(), "Введите пароль", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (passwordRepeat == "") {
+                Toast.makeText(requireContext(), "Повторите пароль", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (password.equals(passwordRepeat)) {
                 val registerData = RegisterUser(nickname=nickname, email=email, password=password)
 

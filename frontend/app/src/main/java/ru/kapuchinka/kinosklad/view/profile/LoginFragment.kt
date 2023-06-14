@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
@@ -37,8 +38,18 @@ class LoginFragment : Fragment() {
         loginButton.setOnClickListener {
             val email = binding.authEmail.text.toString().trim()
             val password = binding.authPassword.text.toString().trim()
-            val loginData = LoginUser(email=email, password=password)
 
+            if (email == "") {
+                Toast.makeText(requireContext(), "Введите email", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password == "") {
+                Toast.makeText(requireContext(), "Введите пароль", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val loginData = LoginUser(email=email, password=password)
             profileViewModel.auth(loginData)
             val tokenViewModel = profileViewModel.myGetToken()
             tokenViewModel.observe(viewLifecycleOwner) { tokenView ->
