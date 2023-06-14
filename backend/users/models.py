@@ -9,7 +9,7 @@ from kinoskladProject import settings
 class User(models.Model):
     user_id = models.IntegerField()
     nickname = models.CharField(max_length=64)
-    email = models.EmailField(max_length=64)
+    email = models.CharField(max_length=64)
     password = models.CharField(max_length=64)
     token = models.CharField(max_length=1024)
 
@@ -21,7 +21,7 @@ class User(models.Model):
 class UserSerializer(serializers.Serializer):
     user_id = serializers.IntegerField()
     nickname = serializers.CharField(max_length=64)
-    email = serializers.EmailField(max_length=64)
+    email = serializers.CharField(max_length=64)
     password = serializers.CharField(max_length=64)
     token = serializers.CharField(max_length=1024)
 
