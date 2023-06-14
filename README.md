@@ -23,9 +23,16 @@
 [Видео Product Mockup проекта](https://youtu.be/C6n3j0hpo-s) <br />
 [Screenshots](https://github.com/Cappuchinka/TP-5.1-4/tree/master/Screenshots) <br />
 
-## Аттестация #3
+## Swagger
 [Swagger](http://193.233.49.143/swagger) <br />
-[Курсовой проект](https://github.com/Cappuchinka/TP-5.1-4/blob/master/documentation/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%BE%D0%B9_%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82.pdf) <br />
+
+## Документация
+[Курсовой проект](https://drive.google.com/file/d/1HBOUrSmBj2FnAMpwYnOTtyOtpWQDz3j8/view?usp=drive_link) <br />
 [Письмо](https://github.com/Cappuchinka/TP-5.1-4/blob/master/documentation/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82/%D0%A1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.pdf) <br />
-[Презентация](https://github.com/Cappuchinka/TP-5.1-4/blob/master/documentation/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82/%D0%9C%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Kinosklad.pdf) <br />
+[Презентация](https://drive.google.com/file/d/1W-jVx-rJRw5LQbHOFO_RHJxqq5aNkUMQ/view?usp=drive_link) <br />
+[Видео серверной части](https://drive.google.com/file/d/1qoOQk0HdGsQYkOpodRQSUEOg21SzPbUv/view?usp=drive_link) <br />
+[Видео клиентской части](https://drive.google.com/file/d/11Lo_CzcZAexGjfprZPYAR7kkIN1HNbi1/view?usp=drive_link) <br />
+[Видео развёртывания](https://drive.google.com/file/d/1s2D_1BbwRlGyZl2pvv-sSN1e-tmB0xBp/view?usp=drive_link) <br />
+
+## APK File
 [APK File](https://drive.google.com/file/d/1sOGbjtZLsiH115cep2g1yA13yrrG9wuG/view?usp=sharing)
