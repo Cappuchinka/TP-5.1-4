@@ -62,13 +62,6 @@
                         app:layout_constraintVertical_bias="0.0" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/page_film_poster"
-                    android:layout_width="312dp"
-                    android:layout_height="212dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/hurrem" />
-
                 <TextView
                     android:id="@+id/page_film_name"
                     android:layout_width="match_parent"
@@ -109,16 +102,17 @@
                     android:textSize="16sp"
                     app:cornerRadius="0dp" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/r_v_feedbacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlue"
+                    android:padding="16dp"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_feedback_layout" />
+
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:background="@color/lightBlue"
-                android:id="@+id/r_v_feedbacks"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/item_feedback_layout"
-                tools:itemCount="5"
-                android:padding="16dp"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
