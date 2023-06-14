@@ -17,15 +17,19 @@ import ru.kapuchinka.kinosklad.viewmodel.profile.ProfileViewModel
 
 
 class LoginFragment : Fragment() {
-    var pref: SharedPreferences? = null
+    private lateinit var pref: SharedPreferences
     private lateinit var binding: FragmentLoginBinding
     private val profileViewModel: ProfileViewModel by viewModels()
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        pref = context.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        pref = context?.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         val loginButton : Button = binding.buttonLogin
         var token: String
@@ -33,17 +37,20 @@ class LoginFragment : Fragment() {
         loginButton.setOnClickListener {
             val email = binding.authEmail.text.toString().trim()
             val password = binding.authPassword.text.toString().trim()
-            val loginData = LoginUser(email, password)
-            profileViewModel.login(loginData)
-            token = profileViewModel.token.value?.token.toString()
-            saveToken(token)
+            val loginData = LoginUser(email=email, password=password)
+            profileViewModel.auth(loginData)
+            val tokenViewModel = profileViewModel.myGetToken()
+            tokenViewModel.observe(viewLifecycleOwner) {
+                token = it.token
+                saveToken(token)
+            }
             it.findNavController().navigate(R.id.action_loginFragment_to_navigation_profile)
         }
         return binding.root
     }
 
     fun saveToken(token: String) {
-        val editor = pref?.edit()
+        val editor = pref.edit()
         editor?.putString("token", token)
         editor?.apply()
     }

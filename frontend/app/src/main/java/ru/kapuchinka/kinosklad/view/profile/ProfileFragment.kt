@@ -15,23 +15,28 @@ import ru.kapuchinka.kinosklad.databinding.FragmentProfileBinding
 import ru.kapuchinka.kinosklad.viewmodel.profile.ProfileViewModel
 
 class ProfileFragment : Fragment() {
-    var pref: SharedPreferences? = null
+    private lateinit var pref: SharedPreferences
     private lateinit var binding: FragmentProfileBinding
     private val profileViewModel: ProfileViewModel by viewModels()
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        pref = context.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        pref = requireContext().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
         binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         val token = getToken()
-        profileViewModel.getUserByToken(token)
-        val user = profileViewModel.user.value
 
-        binding.nickProfile.text = user?.nickname
-        binding.emailProfile.text = user?.email
+        profileViewModel.getUserByToken(token)
+        profileViewModel.user.observe(viewLifecycleOwner) {
+            binding.nickProfile.text = it.nickname
+            binding.emailProfile.text = it.email
+        }
 
         val logoutButton : Button = binding.buttonLogout
 
@@ -44,11 +49,11 @@ class ProfileFragment : Fragment() {
     }
 
     fun getToken() : String {
-        return pref?.getString("token", "")!!
+        return pref.getString("token", "")!!
     }
 
     fun deleteToken() {
-        val editor = pref?.edit()
+        val editor = pref.edit()
         editor?.remove("token")
         editor?.apply()
     }

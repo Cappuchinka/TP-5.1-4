@@ -1,8 +1,7 @@
 package ru.kapuchinka.kinosklad.api.model.user
 
-import com.google.gson.annotations.SerializedName
-
-data class LoginUser(
+data class RegisterUser(
+    val nickname: String,
     val email: String,
     val password: String
 )
