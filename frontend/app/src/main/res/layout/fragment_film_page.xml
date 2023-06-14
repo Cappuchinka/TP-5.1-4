@@ -69,7 +69,7 @@
                     android:gravity="center"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
-                    android:text="Великолепный век"
+                    android:text="Название"
                     android:textColor="@color/black"
                     android:textSize="22sp" />
 
@@ -78,7 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Турция (2011)"
+                    android:text="Страна (Год)"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="@string/describtion_film"
+                    android:text="Описание"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 

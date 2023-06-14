@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.favorite.FavoriteFilm
+import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.favorite.FavoriteFilmViewModel
 
 class FavoriteAdapter(private val itemClickListener: OnItemClickListener,
@@ -43,6 +45,7 @@ class FavoriteAdapter(private val itemClickListener: OnItemClickListener,
         }
 
         holder.deleteButton.setOnClickListener {
+            YandexMetrica.reportEvent(YandexEvents.REMOVE_FROM_FAVORITE)
             favoriteFilmViewModel.deleteFavoriteFilm(context, favoriteFilm.favFilmId)
         }
     }

@@ -10,8 +10,10 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.databinding.FragmentProfileBinding
+import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.profile.ProfileViewModel
 
 class ProfileFragment : Fragment() {
@@ -41,6 +43,7 @@ class ProfileFragment : Fragment() {
         val logoutButton : Button = binding.buttonLogout
 
         logoutButton.setOnClickListener{
+            YandexMetrica.reportEvent(YandexEvents.LOGOUT)
             deleteToken()
             it.findNavController().navigate(R.id.action_navigation_profile_to_authFragment)
         }

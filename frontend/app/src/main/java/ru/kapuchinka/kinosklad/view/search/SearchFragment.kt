@@ -13,10 +13,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.adapter.search.SearchAdapter
 import ru.kapuchinka.kinosklad.api.model.film.Film
 import ru.kapuchinka.kinosklad.databinding.FragmentSearchBinding
+import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.search.SearchViewModel
 
 class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
@@ -51,6 +53,7 @@ class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
             searchViewModel.searchList.observe(viewLifecycleOwner) {
                 adapter.setList(it.films)
             }
+            YandexMetrica.reportEvent(YandexEvents.SEARCH_FILM)
         }
 
         return binding.root

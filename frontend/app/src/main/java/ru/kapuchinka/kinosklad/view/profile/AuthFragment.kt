@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
+import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
+import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
 
 class AuthFragment : Fragment() {
 
@@ -21,10 +23,12 @@ class AuthFragment : Fragment() {
         val regButton : Button = view.findViewById(R.id.button_registration)
 
         logButton.setOnClickListener{
+            YandexMetrica.reportEvent(YandexEvents.AUTH)
             it.findNavController().navigate(R.id.action_authFragment_to_loginFragment)
         }
 
         regButton.setOnClickListener{
+            YandexMetrica.reportEvent(YandexEvents.REGISTRATION)
             it.findNavController().navigate(R.id.action_authFragment_to_registrationFragment)
         }
 

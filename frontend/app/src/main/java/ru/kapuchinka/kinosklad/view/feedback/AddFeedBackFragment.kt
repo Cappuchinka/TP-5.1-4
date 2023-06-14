@@ -11,9 +11,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.feedback.AddFeedback
 import ru.kapuchinka.kinosklad.databinding.FragmentAddFeedBackBinding
+import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.feedback.FeedbackViewModel
 
 class AddFeedBackFragment : Fragment() {
@@ -51,6 +53,7 @@ class AddFeedBackFragment : Fragment() {
             val feedback = AddFeedback(film_id = filmId!!, nickname = nickname, feedback_text = textFeedback)
             feedbackViewModel.addFeedback(feedback = feedback)
 
+            YandexMetrica.reportEvent(YandexEvents.PUBLIC_FEEDBACK)
             val bundle = Bundle()
             bundle.putInt("filmId", filmId)
             it.findNavController().navigate(R.id.action_addFeedBackFragment_to_filmPageFragment, bundle)

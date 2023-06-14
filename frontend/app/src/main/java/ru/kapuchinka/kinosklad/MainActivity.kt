@@ -9,8 +9,14 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import ru.kapuchinka.kinosklad.databinding.ActivityMainBinding
+import com.yandex.metrica.YandexMetrica
+import com.yandex.metrica.YandexMetricaConfig
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val API_KEY = "3c88b606-4ae1-4c4d-ad04-05e52979a429"
+    }
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navView: BottomNavigationView
@@ -26,6 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.nav_host_fragment_activity_main)
         navView = binding.navView
+
+        val config = YandexMetricaConfig.newConfigBuilder(API_KEY).build()
+        YandexMetrica.activate(applicationContext, config)
+        YandexMetrica.enableActivityAutoTracking(this.application)
 
         navView.setOnNavigationItemSelectedListener { menuItem ->
             when(menuItem.itemId) {

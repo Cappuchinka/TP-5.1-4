@@ -17,10 +17,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.adapter.feedback.FeedbackAdapter
 import ru.kapuchinka.kinosklad.databinding.FragmentFilmPageBinding
 import ru.kapuchinka.kinosklad.utils.db.DBManager
+import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.feedback.FeedbackViewModel
 import ru.kapuchinka.kinosklad.viewmodel.filmpage.FilmPageViewModel
 
@@ -78,6 +80,7 @@ class FilmPageFragment : Fragment() {
                 Toast.makeText(requireContext(), "Авторизируйтесь", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            YandexMetrica.reportEvent(YandexEvents.ADD_FEEDBACK)
             val bundle = Bundle()
             bundle.putInt("filmId", filmId!!)
             bundle.putString("token", token)
@@ -94,6 +97,7 @@ class FilmPageFragment : Fragment() {
                 filmPageViewModel.film.value!!.releaseDate)
             Toast.makeText(requireContext(), "Фильм добавлен в избранное", Toast.LENGTH_SHORT).show()
             addFavoriteFilm.setImageResource(R.drawable.bookmark_added)
+            YandexMetrica.reportEvent(YandexEvents.ADD_TO_FAVORITE)
         }
         return binding.root
     }
