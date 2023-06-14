@@ -40,11 +40,11 @@ class LoginFragment : Fragment() {
             val loginData = LoginUser(email=email, password=password)
             profileViewModel.auth(loginData)
             val tokenViewModel = profileViewModel.myGetToken()
-            tokenViewModel.observe(viewLifecycleOwner) {
-                token = it.token
+            tokenViewModel.observe(viewLifecycleOwner) { tokenView ->
+                token = tokenView.token
                 saveToken(token)
+                it.findNavController().navigate(R.id.action_loginFragment_to_navigation_profile)
             }
-            it.findNavController().navigate(R.id.action_loginFragment_to_navigation_profile)
         }
         return binding.root
     }

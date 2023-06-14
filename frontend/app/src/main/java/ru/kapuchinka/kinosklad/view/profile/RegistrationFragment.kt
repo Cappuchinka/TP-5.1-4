@@ -43,11 +43,11 @@ class RegistrationFragment : Fragment() {
             if (password.equals(passwordRepeat)) {
                 val registerData = RegisterUser(nickname=nickname, email=email, password=password)
                 profileViewModel.register(registerData)
-                profileViewModel.token.observe(viewLifecycleOwner) {
-                    token = it.token
+                profileViewModel.token.observe(viewLifecycleOwner) { tokenView ->
+                    token = tokenView.token
                     saveToken(token)
+                    it.findNavController().navigate(R.id.action_registrationFragment_to_navigation_profile)
                 }
-                it.findNavController().navigate(R.id.action_registrationFragment_to_navigation_profile)
             } else {
                 Toast.makeText(requireContext(), "Пароли не совпадают", Toast.LENGTH_SHORT).show()
             }
