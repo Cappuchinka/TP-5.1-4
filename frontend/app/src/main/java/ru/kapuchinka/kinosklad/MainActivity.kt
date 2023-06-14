@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         pref = getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
 
+        val editor = pref.edit()
+        editor?.putString("token", "noToken")
+        editor?.apply()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

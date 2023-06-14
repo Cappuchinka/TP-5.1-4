@@ -1,16 +1,20 @@
 package ru.kapuchinka.kinosklad.view.filmpage
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.kapuchinka.kinosklad.R
@@ -21,12 +25,18 @@ import ru.kapuchinka.kinosklad.viewmodel.feedback.FeedbackViewModel
 import ru.kapuchinka.kinosklad.viewmodel.filmpage.FilmPageViewModel
 
 class FilmPageFragment : Fragment() {
+    private lateinit var pref: SharedPreferences
     lateinit var adapter: FeedbackAdapter
     lateinit var recyclerView: RecyclerView
     private lateinit var binding: FragmentFilmPageBinding
     private val filmPageViewModel: FilmPageViewModel by viewModels()
     private val feedbackViewModel: FeedbackViewModel by viewModels()
     private lateinit var dbManager: DBManager
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        pref = context.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
+    }
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
@@ -40,7 +50,7 @@ class FilmPageFragment : Fragment() {
         val filmId = arguments?.getInt("filmId", 0)
         recyclerView = binding.rVFeedbacks
         recyclerView.layoutManager = LinearLayoutManager(activity)
-//
+
         adapter = FeedbackAdapter()
         recyclerView.adapter = adapter
 
@@ -60,11 +70,17 @@ class FilmPageFragment : Fragment() {
         feedbackViewModel.feedbacks.observe(viewLifecycleOwner) {
             adapter.setList(it.feedbacks)
         }
-//        val feedbackButton : Button = binding.buttonFeedback
-//
-//        feedbackButton.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment)
-//        }
+        val feedbackButton : Button = binding.buttonFeedback
+
+        feedbackButton.setOnClickListener {
+            if (getToken() == "noToken") {
+                Toast.makeText(requireContext(), "Авторизируйтесь", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val bundle = Bundle()
+            bundle.putInt("filmId", filmId!!)
+            it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment, bundle)
+        }
 
         val addFavoriteFilm : ImageButton = binding.buttonAddFavorite
         addFavoriteFilm.setOnClickListener {
@@ -82,5 +98,9 @@ class FilmPageFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         dbManager.closeDB()
+    }
+
+    private fun getToken() : String {
+        return pref.getString("token", "noToken")!!
     }
 }
