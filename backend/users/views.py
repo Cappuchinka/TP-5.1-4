@@ -42,12 +42,10 @@ def register_user(request):
     try:
         user.save_user()
     except ValueError as e:
-        settings.auth.delete_user_account(auth_user['idToken'])
+        settings.auth.delete_user_account(auth_user['token'])
         return JsonResponse({'error': e.args[0]})
 
-    json_response = dict()
-    json_response['token'] = str(user.token)
-    return JsonResponse({'token': json_response})
+    return JsonResponse({'token': auth_user.get('localId')})
 
 
 @extend_schema(
