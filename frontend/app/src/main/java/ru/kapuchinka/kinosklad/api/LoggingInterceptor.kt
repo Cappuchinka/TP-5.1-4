@@ -56,7 +56,7 @@ class LoggingInterceptor : Interceptor {
         return try {
             val source = this?.source()
             source?.request(Long.MAX_VALUE)
-            val buffer = source?.buffer()
+            val buffer = source?.buffer
             val charset = Charset.forName("UTF-8")
             buffer?.clone()?.readString(charset) ?: "Empty response body"
         } catch (e: IOException) {
@@ -64,5 +64,6 @@ class LoggingInterceptor : Interceptor {
         }
     }
 }
+
 
 

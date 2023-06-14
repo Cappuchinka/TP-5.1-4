@@ -42,8 +42,10 @@ class RegistrationFragment : Fragment() {
 
             if (password.equals(passwordRepeat)) {
                 val registerData = RegisterUser(nickname=nickname, email=email, password=password)
+
                 profileViewModel.register(registerData)
-                profileViewModel.token.observe(viewLifecycleOwner) { tokenView ->
+                val tokenViewModel = profileViewModel.myGetToken()
+                tokenViewModel.observe(viewLifecycleOwner) { tokenView ->
                     token = tokenView.token
                     saveToken(token)
                     it.findNavController().navigate(R.id.action_registrationFragment_to_navigation_profile)

@@ -38,6 +38,7 @@ class LoginFragment : Fragment() {
             val email = binding.authEmail.text.toString().trim()
             val password = binding.authPassword.text.toString().trim()
             val loginData = LoginUser(email=email, password=password)
+
             profileViewModel.auth(loginData)
             val tokenViewModel = profileViewModel.myGetToken()
             tokenViewModel.observe(viewLifecycleOwner) { tokenView ->

@@ -48,13 +48,13 @@ class ProfileFragment : Fragment() {
         return binding.root
     }
 
-    fun getToken() : String {
+    private fun getToken() : String {
         return pref.getString("token", "")!!
     }
 
-    fun deleteToken() {
+    private fun deleteToken() {
         val editor = pref.edit()
-        editor?.remove("token")
+        editor?.putString("token", "noToken")
         editor?.apply()
     }
 }
