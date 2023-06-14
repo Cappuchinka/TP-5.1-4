@@ -45,7 +45,7 @@ def register_user(request):
         settings.auth.delete_user_account(auth_user['idToken'])
         return JsonResponse({'error': e.args[0]})
 
-    return JsonResponse({'idToken': user.token})
+    return JsonResponse({'token': user.token})
 
 
 @extend_schema(
@@ -63,7 +63,7 @@ def auth_user(request):
         return JsonResponse({'error': 'INVALID_CREDENTIALS'})
     except HTTPError as exception:
         return JsonResponse({'error': extract_http_error_message(exception.args[1])})
-    return JsonResponse({'idToken': auth_user.get('localId')})
+    return JsonResponse({'token': auth_user.get('localId')})
 
 
 @extend_schema(
