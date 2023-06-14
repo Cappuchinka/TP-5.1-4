@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        pref = getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
+        pref = applicationContext.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_profile -> {
-                    if (pref?.getString("token", "").equals("")) {
+                    if (pref?.getString("token", "noToken").equals("noToken")) {
                         navController.navigate(R.id.authFragment)
                     } else {
                         navController.navigate(R.id.navigation_profile)
@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
         visibilityNavElements()
     }
 

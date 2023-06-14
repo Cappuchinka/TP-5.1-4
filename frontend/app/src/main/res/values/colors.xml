@@ -8,4 +8,5 @@
     <color name="blue">#1111FF</color>
     <color name="itemCategoryFilms">#DAEFFB</color>
     <color name="itemFeedbackBackground">#A4E4FF</color>
+    <color name="darkGray">#3A3A3A</color>
 </resources>

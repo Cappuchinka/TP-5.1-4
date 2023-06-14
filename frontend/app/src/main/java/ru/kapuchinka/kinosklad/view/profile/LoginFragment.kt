@@ -25,17 +25,17 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        pref = requireContext().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
+        pref = context?.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         val loginButton : Button = binding.buttonLogin
         var token: String
 
         loginButton.setOnClickListener {
-            val email = binding.authEmail.text.toString()
-            val password = binding.authPassword.text.toString()
+            val email = binding.authEmail.text.toString().trim()
+            val password = binding.authPassword.text.toString().trim()
             val loginData = LoginUser(email, password)
             profileViewModel.login(loginData)
-            token = profileViewModel.token.value.toString()
+            token = profileViewModel.token.value?.token.toString()
             saveToken(token)
             it.findNavController().navigate(R.id.action_loginFragment_to_navigation_profile)
         }

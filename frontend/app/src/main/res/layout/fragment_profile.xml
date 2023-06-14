@@ -9,7 +9,7 @@
     android:background="@color/lightBlue">
 
     <TextView
-        android:id="@+id/text_profile"
+        android:id="@+id/nick_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kapuchinka"
@@ -22,10 +22,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.109" />
 
+    <TextView
+        android:id="@+id/email_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="volchenko.coffee@gmail.com"
+        android:textColor="@color/darkGray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nick_profile"
+        app:layout_constraintVertical_bias="0.022" />
+
     <Button
         android:id="@+id/button_logout"
         android:layout_width="288dp"
         android:layout_height="52dp"
+        android:layout_marginTop="223dp"
         android:backgroundTint="@color/white"
         android:text="Выйти"
         android:textColor="@color/black"
@@ -35,7 +50,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_profile"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintTop_toBottomOf="@+id/email_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
