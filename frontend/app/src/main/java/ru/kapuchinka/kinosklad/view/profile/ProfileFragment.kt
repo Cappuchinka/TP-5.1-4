@@ -54,7 +54,7 @@ class ProfileFragment : Fragment() {
 
     private fun deleteToken() {
         val editor = pref.edit()
-        editor?.putString("token", "noToken")
+        editor?.putString("token", "")
         editor?.apply()
     }
 }

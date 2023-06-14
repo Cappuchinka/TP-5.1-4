@@ -31,10 +31,10 @@ class AddFeedBackFragment : Fragment() {
     ): View? {
         binding = FragmentAddFeedBackBinding.inflate(inflater, container, false)
         val filmId = arguments?.getInt("filmId", 0)
-        val token = getToken()
+        val token = arguments?.getString("token", "")
         lateinit var nickname: String
 
-        feedbackViewModel.getUserByToken(token)
+        feedbackViewModel.getUserByToken(token!!)
         feedbackViewModel.nickname.observe(viewLifecycleOwner) {
             nickname = it.toString()
         }
@@ -57,9 +57,5 @@ class AddFeedBackFragment : Fragment() {
         }
 
         return binding.root
-    }
-
-    private fun getToken() : String {
-        return pref.getString("token", "noToken")!!
     }
 }

@@ -73,12 +73,15 @@ class FilmPageFragment : Fragment() {
         val feedbackButton : Button = binding.buttonFeedback
 
         feedbackButton.setOnClickListener {
-            if (getToken() == "noToken") {
+            val token = getToken()
+            if  (token == "") {
                 Toast.makeText(requireContext(), "Авторизируйтесь", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             val bundle = Bundle()
             bundle.putInt("filmId", filmId!!)
+            bundle.putString("token", token)
+
             it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment, bundle)
         }
 
@@ -101,6 +104,6 @@ class FilmPageFragment : Fragment() {
     }
 
     private fun getToken() : String {
-        return pref.getString("token", "noToken")!!
+        return pref.getString("token", "")!!
     }
 }

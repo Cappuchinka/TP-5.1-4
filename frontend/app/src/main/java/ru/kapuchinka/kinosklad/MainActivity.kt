@@ -21,10 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         pref = getSharedPreferences("USER_DATA", Context.MODE_PRIVATE)
 
-        val editor = pref.edit()
-        editor?.putString("token", "noToken")
-        editor?.apply()
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -46,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_profile -> {
-                    if (pref?.getString("token", "noToken").equals("noToken")) {
+                    if (pref.getString("token", "").equals("")) {
                         navController.navigate(R.id.authFragment)
                     } else {
                         navController.navigate(R.id.navigation_profile)
