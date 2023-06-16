@@ -11,7 +11,7 @@ import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.film.Film
 
 class SearchAdapter(private val itemClickListener: OnItemClickListener) : RecyclerView.Adapter<SearchAdapter.SearchViewHolder>() {
-    var searchList = emptyList<Film>()
+    var searchList: MutableList<Film> = mutableListOf()
 
     interface OnItemClickListener {
         fun onItemClick(film: Film)
@@ -24,7 +24,7 @@ class SearchAdapter(private val itemClickListener: OnItemClickListener) : Recycl
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
-        val filmItems : View = LayoutInflater.from(parent.context).inflate(R.layout.item_film_layout, parent, false)
+        val filmItems: View = LayoutInflater.from(parent.context).inflate(R.layout.item_film_layout, parent, false)
         return SearchViewHolder(filmItems)
     }
 
@@ -38,11 +38,6 @@ class SearchAdapter(private val itemClickListener: OnItemClickListener) : Recycl
         holder.filmCountry.text = film.country
         holder.filmYear.text = film.releaseDate.toString()
 
-        val bundle = Bundle()
-        bundle.putString("filmName", film.name)
-        bundle.putString("filmCountry", film.country)
-        bundle.putInt("filmYear", film.releaseDate)
-
         holder.itemView.setOnClickListener {
             itemClickListener.onItemClick(film)
         }
@@ -50,7 +45,8 @@ class SearchAdapter(private val itemClickListener: OnItemClickListener) : Recycl
 
     @SuppressLint("NotifyDataSetChanged")
     fun setList(filmsList: List<Film>) {
-        searchList = filmsList
+        searchList.clear()
+        searchList.addAll(filmsList)
         notifyDataSetChanged()
     }
 }

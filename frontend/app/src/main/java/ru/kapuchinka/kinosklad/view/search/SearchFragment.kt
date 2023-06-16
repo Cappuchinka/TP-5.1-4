@@ -22,41 +22,56 @@ import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.search.SearchViewModel
 
 class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
-    lateinit var adapter: SearchAdapter
-    lateinit var recyclerView: RecyclerView
-
-    private val searchViewModel: SearchViewModel by viewModels()
-
+    private lateinit var adapter: SearchAdapter
+    private lateinit var recyclerView: RecyclerView
     private lateinit var binding: FragmentSearchBinding
-    @RequiresApi(Build.VERSION_CODES.O)
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    private val searchViewModel: SearchViewModel by viewModels()
+    private val STATE_ADAPTER_DATA = "adapterData"
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
         recyclerView = binding.rVSearch
-        recyclerView.layoutManager = LinearLayoutManager(activity)
-        adapter = SearchAdapter(this)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        // Создаем адаптер только один раз, если он еще не был инициализирован
+        if (!::adapter.isInitialized) {
+            adapter = SearchAdapter(this)
+        }
+
         recyclerView.adapter = adapter
 
         val searchButton: ImageButton = binding.buttonSearch
-        lateinit var searchText: String
 
         searchButton.setOnClickListener {
-            searchText = binding.searchStroke.text.toString().trim()
+            val searchText = binding.searchStroke.text.toString().trim()
 
-            if (searchText == "") {
+            if (searchText.isEmpty()) {
                 Toast.makeText(requireContext(), "Введите название фильма", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             searchViewModel.getFilmsByName(searchText)
-            searchViewModel.searchList.observe(viewLifecycleOwner) {
-                adapter.setList(it.films)
+            searchViewModel.searchList.observe(viewLifecycleOwner) { films ->
+                adapter.setList(films.films)
             }
+
             YandexMetrica.reportEvent(YandexEvents.SEARCH_FILM)
         }
 
         return binding.root
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelableArrayList(STATE_ADAPTER_DATA, ArrayList(adapter.searchList)) // Сохраняем данные адаптера в Bundle
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        if (savedInstanceState != null) {
+            val adapterData = savedInstanceState.getParcelableArrayList<Film>(STATE_ADAPTER_DATA)
+            adapter.setList(adapterData ?: emptyList()) // Если данные нулевые, используем пустой список
+        }
     }
 
     override fun onItemClick(film: Film) {
@@ -66,3 +81,4 @@ class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
         findNavController().navigate(R.id.action_navigation_search_to_filmPageFragment, bundle)
     }
 }
+
