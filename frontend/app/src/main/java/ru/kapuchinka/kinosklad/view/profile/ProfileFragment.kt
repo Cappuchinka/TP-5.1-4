@@ -13,7 +13,7 @@ import androidx.navigation.findNavController
 import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.databinding.FragmentProfileBinding
-import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
+import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.profile.ProfileViewModel
 
 class ProfileFragment : Fragment() {

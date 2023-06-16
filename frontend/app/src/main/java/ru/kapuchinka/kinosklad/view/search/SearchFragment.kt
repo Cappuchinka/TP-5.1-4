@@ -18,7 +18,7 @@ import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.adapter.search.SearchAdapter
 import ru.kapuchinka.kinosklad.api.model.film.Film
 import ru.kapuchinka.kinosklad.databinding.FragmentSearchBinding
-import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
+import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.search.SearchViewModel
 
 class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {

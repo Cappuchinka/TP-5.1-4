@@ -30,7 +30,7 @@
         android:layout_height="56dp"
         android:backgroundTint="@color/white"
         android:foregroundTint="@color/white"
-        android:text="Зерагистрироваться"
+        android:text="Зарегистрироваться"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:cornerRadius="0dp"

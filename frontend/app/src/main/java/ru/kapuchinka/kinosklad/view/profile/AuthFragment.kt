@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.navigation.findNavController
 import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
-import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
+import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 
 class AuthFragment : Fragment() {
 

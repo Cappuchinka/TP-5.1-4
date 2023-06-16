@@ -1,4 +1,4 @@
-package ru.kapuchinka.kinosklad.utils.db.YandexMetrica
+package ru.kapuchinka.kinosklad.utils.YandexMetrica
 
 object YandexEvents {
     const val AUTH = "Авторизация"

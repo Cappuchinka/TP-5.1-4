@@ -8,17 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.favorite.FavoriteFilm
-import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
+import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.favorite.FavoriteFilmViewModel
 
 class FavoriteAdapter(private val itemClickListener: OnItemClickListener,
                       private val favoriteFilmViewModel: FavoriteFilmViewModel,
                       private val context: Context) : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
-    var favoriteList = emptyList<FavoriteFilm>()
+    var favoriteList = ArrayList<FavoriteFilm>()
 
     interface OnItemClickListener {
         fun onItemClick(favoriteFilm: FavoriteFilm)
@@ -28,6 +29,7 @@ class FavoriteAdapter(private val itemClickListener: OnItemClickListener,
         val filmItems : View = LayoutInflater.from(parent.context).inflate(R.layout.item_favorite_layout, parent, false)
         return FavoriteViewHolder(filmItems)
     }
+
 
     override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         val favoriteFilm = favoriteList[position]
@@ -46,7 +48,11 @@ class FavoriteAdapter(private val itemClickListener: OnItemClickListener,
 
         holder.deleteButton.setOnClickListener {
             YandexMetrica.reportEvent(YandexEvents.REMOVE_FROM_FAVORITE)
+            Toast.makeText(context, "Фильм удалён из избранного", Toast.LENGTH_SHORT).show()
             favoriteFilmViewModel.deleteFavoriteFilm(context, favoriteFilm.favFilmId)
+            favoriteList.removeAt(position) // Удаление элемента из списка данных
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position, favoriteList.size) // Обновление позиций элементов после удаления
         }
     }
 
@@ -62,7 +68,7 @@ class FavoriteAdapter(private val itemClickListener: OnItemClickListener,
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(filmsList: List<FavoriteFilm>) {
+    fun setList(filmsList: ArrayList<FavoriteFilm>) {
         favoriteList = filmsList
         notifyDataSetChanged()
     }

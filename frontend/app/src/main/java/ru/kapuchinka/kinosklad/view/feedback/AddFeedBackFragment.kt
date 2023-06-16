@@ -15,7 +15,7 @@ import com.yandex.metrica.YandexMetrica
 import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.api.model.feedback.AddFeedback
 import ru.kapuchinka.kinosklad.databinding.FragmentAddFeedBackBinding
-import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
+import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.feedback.FeedbackViewModel
 
 class AddFeedBackFragment : Fragment() {

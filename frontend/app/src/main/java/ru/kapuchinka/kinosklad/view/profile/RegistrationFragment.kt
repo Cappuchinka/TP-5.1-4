@@ -50,8 +50,18 @@ class RegistrationFragment : Fragment() {
                 return@setOnClickListener
             }
 
+            if (nickname.length < 4) {
+                Toast.makeText(requireContext(), "Никнейм должен быть больше 4 символов", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (password == "") {
                 Toast.makeText(requireContext(), "Введите пароль", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password.length < 6) {
+                Toast.makeText(requireContext(), "Пароль не может быть меньше 6 символов", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 

@@ -47,7 +47,26 @@ class DBManager(context: Context) {
         db?.execSQL("DELETE FROM ${FavoriteDataBaseColumns.TABLE_NAME} WHERE _id = $favFilmID")
     }
 
+    fun deleteFilmFromDBByFilmID(filmID: Int) {
+        db?.execSQL("DELETE FROM ${FavoriteDataBaseColumns.TABLE_NAME} WHERE ${FavoriteDataBaseColumns.COLUMN_FILM_ID} = $filmID")
+    }
+
     fun closeDB() {
         dbHelper.close()
+    }
+
+    @SuppressLint("Range")
+    fun isFavoriteFilm(film_id: Int) : Boolean {
+        val cursor = db?.query(FavoriteDataBaseColumns.TABLE_NAME, null, null,
+            null, null, null, null)
+        while (cursor?.moveToNext()!!) {
+            val id = cursor.getInt(cursor.getColumnIndex(FavoriteDataBaseColumns.COLUMN_FILM_ID))
+            if (id == film_id) {
+                cursor.close()
+                return true
+            }
+        }
+        cursor.close()
+        return false
     }
 }

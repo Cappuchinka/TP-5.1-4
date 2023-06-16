@@ -22,7 +22,7 @@ import ru.kapuchinka.kinosklad.R
 import ru.kapuchinka.kinosklad.adapter.feedback.FeedbackAdapter
 import ru.kapuchinka.kinosklad.databinding.FragmentFilmPageBinding
 import ru.kapuchinka.kinosklad.utils.db.DBManager
-import ru.kapuchinka.kinosklad.utils.db.YandexMetrica.YandexEvents
+import ru.kapuchinka.kinosklad.utils.YandexMetrica.YandexEvents
 import ru.kapuchinka.kinosklad.viewmodel.feedback.FeedbackViewModel
 import ru.kapuchinka.kinosklad.viewmodel.filmpage.FilmPageViewModel
 
@@ -34,6 +34,8 @@ class FilmPageFragment : Fragment() {
     private val filmPageViewModel: FilmPageViewModel by viewModels()
     private val feedbackViewModel: FeedbackViewModel by viewModels()
     private lateinit var dbManager: DBManager
+    private lateinit var feedbackButton : Button
+    private lateinit var addFavoriteFilm : ImageButton
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -47,6 +49,8 @@ class FilmPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFilmPageBinding.inflate(inflater, container, false)
+        feedbackButton = binding.buttonFeedback
+        addFavoriteFilm = binding.buttonAddFavorite
         dbManager = context?.let { DBManager(it) }!!
 
         val filmId = arguments?.getInt("filmId", 0)
@@ -56,9 +60,11 @@ class FilmPageFragment : Fragment() {
         adapter = FeedbackAdapter()
         recyclerView.adapter = adapter
 
-        if (filmId != null) {
-            filmPageViewModel.getFilmById(filmId)
-        }
+        filmPageViewModel.isFavoriteFilmCheck(requireContext(), filmId!!)
+        var isFavoriteFilm = filmPageViewModel.isFavoriteFilm()
+        checkIsFavoriteFilm(isFavoriteFilm)
+
+        filmPageViewModel.getFilmById(filmId)
         filmPageViewModel.film.observe(viewLifecycleOwner) {
             binding.pageFilmName.text = filmPageViewModel.film.value!!.name
             val country = filmPageViewModel.film.value!!.country
@@ -66,13 +72,11 @@ class FilmPageFragment : Fragment() {
             binding.pageFilmCountryYear.text = "$country ($year)"
             binding.pageFilmDescription.text = filmPageViewModel.film.value!!.description
         }
-        if (filmId != null) {
-            feedbackViewModel.getFeedbackByFilmId(filmId)
-        }
+
+        feedbackViewModel.getFeedbackByFilmId(filmId)
         feedbackViewModel.feedbacks.observe(viewLifecycleOwner) {
             adapter.setList(it.feedbacks)
         }
-        val feedbackButton : Button = binding.buttonFeedback
 
         feedbackButton.setOnClickListener {
             val token = getToken()
@@ -88,16 +92,27 @@ class FilmPageFragment : Fragment() {
             it.findNavController().navigate(R.id.action_filmPageFragment_to_addFeedBackFragment, bundle)
         }
 
-        val addFavoriteFilm : ImageButton = binding.buttonAddFavorite
         addFavoriteFilm.setOnClickListener {
-            dbManager.openDB()
-            dbManager.insertToDB(filmPageViewModel.film.value!!.film_id,
-                filmPageViewModel.film.value!!.name,
-                filmPageViewModel.film.value!!.country,
-                filmPageViewModel.film.value!!.releaseDate)
-            Toast.makeText(requireContext(), "Фильм добавлен в избранное", Toast.LENGTH_SHORT).show()
-            addFavoriteFilm.setImageResource(R.drawable.bookmark_added)
-            YandexMetrica.reportEvent(YandexEvents.ADD_TO_FAVORITE)
+            if (isFavoriteFilm) {
+                dbManager.openDB()
+                dbManager.deleteFilmFromDBByFilmID(filmId)
+                dbManager.closeDB()
+                addFavoriteFilm.setImageResource(R.drawable.film_bookmark)
+                isFavoriteFilm = false
+                Toast.makeText(requireContext(), "Фильм удалён из избранного", Toast.LENGTH_SHORT).show()
+                YandexMetrica.reportEvent(YandexEvents.REMOVE_FROM_FAVORITE)
+            } else {
+                dbManager.openDB()
+                dbManager.insertToDB(filmPageViewModel.film.value!!.film_id,
+                    filmPageViewModel.film.value!!.name,
+                    filmPageViewModel.film.value!!.country,
+                    filmPageViewModel.film.value!!.releaseDate)
+                dbManager.closeDB()
+                isFavoriteFilm = true
+                Toast.makeText(requireContext(), "Фильм добавлен в избранное", Toast.LENGTH_SHORT).show()
+                addFavoriteFilm.setImageResource(R.drawable.bookmark_added)
+                YandexMetrica.reportEvent(YandexEvents.ADD_TO_FAVORITE)
+            }
         }
         return binding.root
     }
@@ -109,5 +124,13 @@ class FilmPageFragment : Fragment() {
 
     private fun getToken() : String {
         return pref.getString("token", "")!!
+    }
+
+    private fun checkIsFavoriteFilm(isFavFilm: Boolean) {
+        if (isFavFilm) {
+            addFavoriteFilm.setImageResource(R.drawable.bookmark_added)
+        } else {
+            addFavoriteFilm.setImageResource(R.drawable.film_bookmark)
+        }
     }
 }
