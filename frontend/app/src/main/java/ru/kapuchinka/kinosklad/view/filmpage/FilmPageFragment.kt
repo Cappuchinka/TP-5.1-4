@@ -133,4 +133,10 @@ class FilmPageFragment : Fragment() {
             addFavoriteFilm.setImageResource(R.drawable.film_bookmark)
         }
     }
+
+    @SuppressLint("NotifyDataSetChanged")
+    override fun onStart() {
+        super.onStart()
+        adapter.notifyDataSetChanged()
+    }
 }

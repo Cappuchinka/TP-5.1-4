@@ -23,6 +23,7 @@ class FeedbackAdapter() : RecyclerView.Adapter<FeedbackAdapter.FeedBackViewHolde
         return FeedBackViewHolder(feedbackItems)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: FeedBackViewHolder, position: Int) {
         val feedback = feedbacks[position]
         holder.userName.text = feedback.nickname
