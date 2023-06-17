@@ -20,6 +20,8 @@ class RegistrationFragment : Fragment() {
     private lateinit var pref: SharedPreferences
     private val profileViewModel: ProfileViewModel by viewModels()
     private lateinit var binding: FragmentRegistrationBinding
+    private val emailRegex = Regex("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -41,6 +43,11 @@ class RegistrationFragment : Fragment() {
             val passwordRepeat = binding.regPasswordRepeat.text.toString().trim()
 
             if (email == "") {
+                Toast.makeText(requireContext(), "Введите email", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (!isEmailValid(email)) {
                 Toast.makeText(requireContext(), "Введите email", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -87,10 +94,14 @@ class RegistrationFragment : Fragment() {
         return binding.root
     }
 
-    fun saveToken(token: String) {
+    private fun saveToken(token: String) {
         val editor = pref.edit()
         editor?.putString("token", token)
         editor?.apply()
+    }
+
+    private fun isEmailValid(email: String): Boolean {
+        return emailRegex.matches(email)
     }
 }
 
