@@ -71,3 +71,17 @@ class FeedbackAddSerializer(serializers.Serializer):
 )
 class FeedbackListSerializer(serializers.Serializer):
     feedbacks = serializers.JSONField()
+
+
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            'Delete feedback',
+            summary="Delete",
+            request_only=True,
+            response_only=False
+        )
+    ]
+)
+class FeedbackDeleteSerializer(serializers.Serializer):
+    feedback_id = serializers.IntegerField()

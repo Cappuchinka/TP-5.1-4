@@ -67,7 +67,6 @@ class FilmAddSerializer(serializers.Serializer):
 )
 class FilmDeleteSerializer(serializers.Serializer):
     film_id = serializers.IntegerField()
-    idToken = serializers.CharField(max_length=1024)
 
 
 @extend_schema_serializer(

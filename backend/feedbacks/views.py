@@ -64,3 +64,18 @@ def get_feedback_by_film_id(request, film_id):
     if not json_feedbacks.is_valid():
         raise ValidationError
     return JsonResponse(json_feedbacks.data)
+
+
+@extend_schema(
+    request=models.FeedbackDeleteSerializer,
+    responses=models.FeedbackDeleteSerializer,
+    tags=['Feedbacks']
+)
+@api_view(['DELETE'])
+def delete_feedback_by_id(request, feedback_id):
+    if not settings.database.child(settings.FEEDBACKS_TABLE).child(feedback_id).get().val():
+        return JsonResponse({'error': 'INVALID_FEEDBACK_ID'})
+    feedback_list = settings.database.child(settings.FEEDBACKS_TABLE).get().val()
+    feedback_list.pop(feedback_id)
+    settings.database.child(settings.FEEDBACKS_TABLE).set(feedback_list)
+    return HttpResponse(HttpResponse.status_code)
