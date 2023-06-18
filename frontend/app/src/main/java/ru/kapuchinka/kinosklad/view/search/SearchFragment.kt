@@ -45,6 +45,11 @@ class SearchFragment : Fragment(), SearchAdapter.OnItemClickListener {
         searchButton.setOnClickListener {
             val searchText = binding.searchStroke.text.toString().trim()
 
+            if (searchText == "." || searchText == "..") {
+                Toast.makeText(requireContext(), "Недопустимые символы в поисковом запросе", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (searchText.isEmpty()) {
                 Toast.makeText(requireContext(), "Введите название фильма", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
