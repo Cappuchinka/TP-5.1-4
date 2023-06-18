@@ -1,0 +1,244 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ru.kapuchinka.kinosklad"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:6:5-75
+12-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:6:22-73
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:7:22-76
+14
+15    <permission
+15-->[androidx.core:core:1.10.1] C:\Users\volch\.gradle\caches\transforms-3\7810e8761aa3025c239028b0b49ad789\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+16        android:name="ru.kapuchinka.kinosklad.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.10.1] C:\Users\volch\.gradle\caches\transforms-3\7810e8761aa3025c239028b0b49ad789\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.10.1] C:\Users\volch\.gradle\caches\transforms-3\7810e8761aa3025c239028b0b49ad789\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="ru.kapuchinka.kinosklad.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.10.1] C:\Users\volch\.gradle\caches\transforms-3\7810e8761aa3025c239028b0b49ad789\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.10.1] C:\Users\volch\.gradle\caches\transforms-3\7810e8761aa3025c239028b0b49ad789\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:9:5-33:19
+22        android:allowBackup="true"
+22-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.10.1] C:\Users\volch\.gradle\caches\transforms-3\7810e8761aa3025c239028b0b49ad789\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+24        android:dataExtractionRules="@xml/data_extraction_rules"
+24-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:11:9-65
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:12:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:13:9-43
+28        android:label="@string/app_name"
+28-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:14:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:15:9-54
+30        android:supportsRtl="true"
+30-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:16:9-35
+31        android:theme="@style/Theme.Kinosklad"
+31-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:17:9-47
+32        android:usesCleartextTraffic="true" >
+32-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:19:9-44
+33        <activity
+33-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:20:9-32:20
+34            android:name="ru.kapuchinka.kinosklad.MainActivity"
+34-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:21:13-41
+35            android:exported="true"
+35-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:22:13-36
+36            android:label="@string/app_name"
+36-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:23:13-45
+37            android:screenOrientation="portrait"
+37-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:24:13-49
+38            android:windowSoftInputMode="adjustPan" >
+38-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:25:13-52
+39            <intent-filter>
+39-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:27:13-31:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:28:17-69
+40-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:28:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:30:17-77
+42-->C:\Users\volch\Documents\TP_Kinosklad\TP-5.1-4\frontend\app\src\main\AndroidManifest.xml:30:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <provider
+46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+47            android:name="androidx.startup.InitializationProvider"
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+48            android:authorities="ru.kapuchinka.kinosklad.androidx-startup"
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+49            android:exported="false" >
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+50            <meta-data
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+52                android:value="androidx.startup" />
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\volch\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+53            <meta-data
+53-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\volch\.gradle\caches\transforms-3\f5c82b6cce15508f86ca9ade3e03a211\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+54-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\volch\.gradle\caches\transforms-3\f5c82b6cce15508f86ca9ade3e03a211\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+55                android:value="androidx.startup" />
+55-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\volch\.gradle\caches\transforms-3\f5c82b6cce15508f86ca9ade3e03a211\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+56            <meta-data
+56-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+57                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+57-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+58                android:value="androidx.startup" />
+58-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+59        </provider>
+60
+61        <uses-library
+61-->[androidx.window:window:1.0.0] C:\Users\volch\.gradle\caches\transforms-3\8f2ff71ea72d4f0da5538e4f2052d74f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+62            android:name="androidx.window.extensions"
+62-->[androidx.window:window:1.0.0] C:\Users\volch\.gradle\caches\transforms-3\8f2ff71ea72d4f0da5538e4f2052d74f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+63            android:required="false" />
+63-->[androidx.window:window:1.0.0] C:\Users\volch\.gradle\caches\transforms-3\8f2ff71ea72d4f0da5538e4f2052d74f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+64        <uses-library
+64-->[androidx.window:window:1.0.0] C:\Users\volch\.gradle\caches\transforms-3\8f2ff71ea72d4f0da5538e4f2052d74f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+65            android:name="androidx.window.sidecar"
+65-->[androidx.window:window:1.0.0] C:\Users\volch\.gradle\caches\transforms-3\8f2ff71ea72d4f0da5538e4f2052d74f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+66            android:required="false" /> <!-- Yandex Mobile Metrica Analytics: common service -->
+66-->[androidx.window:window:1.0.0] C:\Users\volch\.gradle\caches\transforms-3\8f2ff71ea72d4f0da5538e4f2052d74f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+67        <service
+67-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:26:9-43:19
+68            android:name="com.yandex.metrica.MetricaService"
+68-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:27:13-61
+69            android:enabled="true"
+69-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:28:13-35
+70            android:exported="true"
+70-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:29:13-36
+71            android:process=":Metrica" >
+71-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:30:13-39
+72            <intent-filter>
+72-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:32:13-38:29
+73                <category android:name="android.intent.category.DEFAULT" />
+73-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:33:17-76
+73-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:33:27-73
+74
+75                <action android:name="com.yandex.metrica.IMetricaService" />
+75-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:35:17-77
+75-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:35:25-74
+76
+77                <data android:scheme="metrica" />
+77-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:37:17-50
+77-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:37:23-47
+78            </intent-filter>
+79
+80            <meta-data
+80-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:40:13-42:38
+81                android:name="metrica:api:level"
+81-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:41:17-49
+82                android:value="66" />
+82-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:42:17-35
+83        </service>
+84        <service
+84-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:44:9-57:19
+85            android:name="com.yandex.metrica.ConfigurationService"
+85-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:45:13-67
+86            android:enabled="true"
+86-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:46:13-35
+87            android:exported="true"
+87-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:47:13-36
+88            android:process=":Metrica" >
+88-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:48:13-39
+89            <meta-data
+89-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:50:13-52:37
+90                android:name="metrica:configuration:api:level"
+90-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:51:17-63
+91                android:value="2" />
+91-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:52:17-34
+92
+93            <intent-filter>
+93-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:54:13-56:29
+94                <action android:name="com.yandex.metrica.configuration.ACTION_START" />
+94-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:55:17-88
+94-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:55:25-85
+95            </intent-filter>
+96        </service>
+97        <service
+97-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:58:9-64:19
+98            android:name="com.yandex.metrica.ConfigurationJobService"
+98-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:59:13-70
+99            android:enabled="true"
+99-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:60:13-35
+100            android:exported="false"
+100-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:61:13-37
+101            android:permission="android.permission.BIND_JOB_SERVICE"
+101-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:62:13-69
+102            android:process=":Metrica" >
+102-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:63:13-39
+103        </service> <!-- Yandex Mobile Metrica Analytics: main receiver -->
+104        <receiver
+104-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:67:9-75:20
+105            android:name="com.yandex.metrica.MetricaEventHandler"
+105-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:68:13-66
+106            android:enabled="true"
+106-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:69:13-35
+107            android:exported="true" >
+107-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:70:13-36
+108            <intent-filter>
+108-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:72:13-74:29
+109                <action android:name="com.android.vending.INSTALL_REFERRER" />
+109-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:73:17-79
+109-->[com.yandex.android:mobmetricalib:3.0.0] C:\Users\volch\.gradle\caches\transforms-3\e8262ba5cafdd63a10e102406ea4dff3\transformed\mobmetricalib-3.0.0\AndroidManifest.xml:73:25-76
+110            </intent-filter>
+111        </receiver>
+112        <receiver
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+113            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+114            android:directBootAware="false"
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+115            android:enabled="true"
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+116            android:exported="true"
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+117            android:permission="android.permission.DUMP" >
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+118            <intent-filter>
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+119                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+120            </intent-filter>
+121            <intent-filter>
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+122                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+123            </intent-filter>
+124            <intent-filter>
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+125                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+126            </intent-filter>
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+128                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\volch\.gradle\caches\transforms-3\e220b316109701c53e6077e81f4d3f7e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+129            </intent-filter>
+130        </receiver>
+131    </application>
+132
+133</manifest>

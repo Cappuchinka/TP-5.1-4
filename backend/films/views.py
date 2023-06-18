@@ -81,7 +81,7 @@ def get_film_by_id(request, film_id):
             raise ValidationError
         film = film.save()
     except ValidationError:
-        return JsonResponse({'error': 'INVALID_SESSION_ID'})
+        return JsonResponse({'error': 'INVALID_FILM_ID'})
     return JsonResponse(models.FilmAddSerializer(film).data)
 
 
@@ -93,7 +93,7 @@ def get_film_by_id(request, film_id):
 @api_view(['DELETE'])
 def delete_film(request, film_id):
     if not settings.database.child(settings.FILMS_TABLE).child(film_id).get().val():
-        return JsonResponse({'error': 'INVALID_CATEGORY_ID'})
+        return JsonResponse({'error': 'INVALID_FILM_ID'})
     films_list = settings.database.child(settings.FILMS_TABLE).get().val()
     films_list.pop(film_id)
     settings.database.child(settings.FILMS_TABLE).set(films_list)
@@ -151,3 +151,23 @@ def get_film_by_category(request, category_id):
     if not films.is_valid():
         raise ValidationError
     return JsonResponse(films.data)
+
+@extend_schema(
+    request=models.FilmAddSerializer,
+    tags=['Films']
+)
+@api_view(['PUT'])
+def edit_film(request, film_id):
+    try:
+        body_unicode = request.body.decode('utf-8')
+        body_data = json.loads(body_unicode)
+        film_info = dict(body_data)
+        film_info['film_id'] = film_id
+        film_info = models.FilmSerializer(data=film_info)
+        if not film_info.is_valid():
+            raise ValidationError
+        settings.database.child(settings.FILMS_TABLE).child(film_id).update(dict(film_info.validated_data))
+    except ValidationError:
+        return JsonResponse({'error': 'INVALID_FILM_ID'})
+    return HttpResponse(status=200)
+
