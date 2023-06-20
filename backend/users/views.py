@@ -37,7 +37,7 @@ def register_user(request):
     except HTTPError as exception:
         return JsonResponse({'error': extract_http_error_message(exception.args[1])})
 
-    user = models.User(user_id=user_id, email=credentials.email, nickname=credentials.nickname, password=credentials.password, token=auth_user.get('localId'))
+    user = models.User(user_id=user_id, email=credentials.email, nickname=credentials.nickname, password=credentials.password, is_admin=False, token=auth_user.get('localId'))
 
     try:
         user.save_user()

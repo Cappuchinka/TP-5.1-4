@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="21b8442d-29ad-4336-8338-46255fc1f02a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/films/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/films/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DockerFile" beforeDir="false" afterPath="$PROJECT_DIR$/DockerFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,12 +91,29 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Django Server.kinoskladProject" />
+      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Python.manage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
@@ -129,6 +145,8 @@
       <workItem from="1686713943937" duration="31000" />
       <workItem from="1686718859720" duration="272000" />
       <workItem from="1687109182043" duration="4095000" />
+      <workItem from="1687125935108" duration="2396000" />
+      <workItem from="1687130545572" duration="335000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,7 @@ class User(models.Model):
     nickname = models.CharField(max_length=64)
     email = models.CharField(max_length=64)
     password = models.CharField(max_length=64)
+    is_admin = models.BooleanField(default=False)
     token = models.CharField(max_length=1024)
 
     def save_user(self):
@@ -23,6 +24,7 @@ class UserSerializer(serializers.Serializer):
     nickname = serializers.CharField(max_length=64)
     email = serializers.CharField(max_length=64)
     password = serializers.CharField(max_length=64)
+    is_admin = serializers.BooleanField(default=False)
     token = serializers.CharField(max_length=1024)
 
 
