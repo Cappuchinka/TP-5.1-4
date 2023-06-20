@@ -35,4 +35,4 @@
 [Видео развёртывания](https://drive.google.com/file/d/1s2D_1BbwRlGyZl2pvv-sSN1e-tmB0xBp/view?usp=drive_link) <br />
 
 ## APK File
-[APK File](https://drive.google.com/file/d/1sOGbjtZLsiH115cep2g1yA13yrrG9wuG/view?usp=sharing)
+[APK File](https://drive.google.com/drive/folders/1CwgHzM_R69LX91stJSdi-sLQsWeKlRyD) 
