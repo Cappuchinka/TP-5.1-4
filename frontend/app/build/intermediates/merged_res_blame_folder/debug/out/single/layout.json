@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_add_feed_back.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_add_feed_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\item_feedback_layout.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_feedback_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_change_password.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_search.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\item_favorite_layout.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_favorite_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_auth.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_auth.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\item_category_layout.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_category_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_favorite.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_change_nick.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_change_nick.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_film_page.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_film_page.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeDebugResources-48:/layout/fragment_film_page.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-51:/layout/fragment_film_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\item_film_layout.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\item_film_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_test.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_registration.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_registration.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_splash.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_films.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_films.xml"
+    },
+    {
+        "merged": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-mergeDebugResources-48:\\layout\\fragment_edit_profile.xml",
+        "source": "C:\\Users\\volch\\.gradle\\daemon\\8.0\\ru.kapuchinka.kinosklad.app-main-51:\\layout\\fragment_edit_profile.xml"
+    }
+]

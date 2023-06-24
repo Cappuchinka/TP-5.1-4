@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_login.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_category.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_category.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_add_feed_back.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_add_feed_back.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_favorite.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_favorite.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_profile.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/item_film_layout.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_film_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/item_feedback_layout.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_feedback_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/item_category_layout.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_category_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_film_page.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_film_page.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_films.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_films.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_registration.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_registration.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_auth.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/activity_main.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_splash.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/item_favorite_layout.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_favorite_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-mergeReleaseResources-48:/layout/fragment_search.xml",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_search.xml"
+    }
+]

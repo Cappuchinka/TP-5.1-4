@@ -1,0 +1,214 @@
+[
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_search.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_search.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_gradient_background_splashscreen.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/gradient_background_splashscreen.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_profile.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/profile.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_item_favorite_layout.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_favorite_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/navigation_mobile_navigation.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/navigation/mobile_navigation.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_splash.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_film_bookmark.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/film_bookmark.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_category.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_category.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_favorite.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_favorite.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/xml_backup_rules.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_add_feed_back.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_add_feed_back.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-pngs-45:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_bookmark_added.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/bookmark_added.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_icon_splash.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/icon_splash.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_hurrem.jpg.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/hurrem.jpg"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_poster.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/poster.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_item_category_layout.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_category_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_bookmark.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/bookmark.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_item_feedback_layout.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_feedback_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_ic_launcher_background.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_registration.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_registration.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_activity_main.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_film_page.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_film_page.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_search.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/search.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_starwars.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/starwars.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_auth.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_item_film_layout.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/item_film_layout.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_home.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/home.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_profile.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_films.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_films.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/drawable_delete.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/drawable/delete.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/xml_data_extraction_rules.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/menu_bottom_nav_menu.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/layout_fragment_login.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.kapuchinka.kinosklad.app-merged_res-49:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "ru.kapuchinka.kinosklad.app-main-50:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]
