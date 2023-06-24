@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightBlue">#C9EBFF</color>
+    <color name="startColorGradient">#F5416BFF</color>
+    <color name="endColorGradient">#C9EBFF</color>
+    <color name="blue">#1111FF</color>
+    <color name="itemCategoryFilms">#DAEFFB</color>
+    <color name="itemFeedbackBackground">#A4E4FF</color>
+    <color name="darkGray">#3A3A3A</color>
+</resources>
