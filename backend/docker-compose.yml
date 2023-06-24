@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    server:
+        image: nginx:alpine
+        restart: always
+        depends_on:
+            - web
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
+            - public:/code/public
+
+    web:
+        image: kapuchinka/kinosklad:latest
+        command: bash -c "/code/run.sh"
+        restart: always
+        env_file:
+            - const.env
+        volumes:
+            - public:/code/public
+
+volumes:
+    public:
